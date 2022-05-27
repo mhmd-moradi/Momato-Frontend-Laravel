@@ -10,6 +10,10 @@ body{
     background-color: var(--background);
 }
 
+header{
+    margin: 18px 0 0 45px;
+}
+
 /* Logo */
 #mo{
     color: var(--yellow);
@@ -20,5 +24,13 @@ body{
 #logo{
     font-size: 2em;
     font-weight: bold;
-    margin: 10px 0 0 25px;
+    float: left;
+}
+
+/* Profile Icon */
+#profile-icon{
+    float: right;
+    margin-right: 45px;
+    color: var(--darker-yellow);
+    font-size: 2em;
 }
