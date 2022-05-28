@@ -5,21 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - momato</title>
-    <link rel="stylesheet" href="/css/sign-up.css">
-    <script src="https://kit.fontawesome.com/d8969b722a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/sign-up.css">
 </head>
 <body>
     <section>
         <!-- Nav -->
-        <div id="header">
-            <div id="logo">
-                <span id="mo">mo</span><span id="ma">ma</span>to
-            </div>
-            <div id="home-icon">
-                <i class="fa-solid fa-house"></i>
+        <div id="header2">
+            <div id="text">
+               <h1><span id="mo">mo</span><span id="ma">ma</span>to</h1>
             </div>
         </div>
-
+        <!-- Sign Up -->
+        <div>
+            <div>
+                <div id="right-sign-up"> 
+                    <form>
+                        <h2>
+                            Sign Up
+                        </h2>
+                        <div id="textboxes">
+                            First Name: <br>
+                            <input type="text" name="fname" id="fname" class="txtbox">
+                            <br>
+                            Last Name: <br>
+                            <input type="text" name="lname" id="lname" class="txtbox">
+                            <br>
+                            Email: <br>
+                            <input type="email" name="email" id="email" class="txtbox">
+                            <br>
+                            Password: <br>
+                            <input type="password" name="pass" id="pass" class="txtbox">
+                            <br>
+                            Confirm Password: <br>
+                            <input type="password" name="Cpass" id="Cpass" class="txtbox">
+                            Date of Birth: <br>
+                            <input type="date" id="date" class="txtbox">
+                            <br>
+                            Gender: <br>
+                            Male
+                            <input type="radio" name="gender" value="male" class="radio">
+                            Female
+                            <input type="radio" name="gender" vale="female" class="radio">
+                        </div>
+                        <button id="btn-sign-up">Sign Up</button>
+                        <br/>
+                        <span id="sign-in-label">Already have an account?</span><a href="" id="btn-sign-in">Sign In</a>
+                    </form>
+                </div>
+            </div>
+        </div>
         <!-- Footer -->
         <footer>
             <p>Privacy Policy & Terms of Service | © 2022 Momato, All Rights Reserved</p>
