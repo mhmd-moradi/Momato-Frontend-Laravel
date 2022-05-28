@@ -10,8 +10,12 @@ body{
     background-color: var(--background);
 }
 
-header{
-    margin: 18px 0 0 45px;
+section{
+    display: flex;
+    flex-direction: column;}
+
+#header{
+    margin: 18px 0 50px 45px;
 }
 
 /* Logo */
@@ -34,3 +38,89 @@ header{
     color: var(--darker-yellow);
     font-size: 2em;
 }
+
+/* Form */
+#form-div{
+    width: 50%;
+    margin: 0 auto;
+}
+#form-flex{
+    display: flex;
+}
+#form-left{
+    margin-right: 50px;
+}
+
+/* Upload Image */
+#image-div{
+    text-align:center;
+    padding:3%;
+    border:2px solid var(--yellow);
+    border-radius: 8px;
+    height: 170px;
+    width: 170px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+#inputTag{
+    display: none;
+}
+#image-lbl{
+    cursor:pointer;
+}
+
+/* Labels,Input, Textarea, Selectors */
+label{
+    font-weight: bold;
+    font-size: 1.05em;
+}
+input, textarea{
+    margin: 25px 0 40px 0;
+    height: 50px;
+    width: 450px;
+    font-size: 1.05em;
+    border-radius: 5px;
+    border: 2px solid var(--yellow);
+    padding: 10px;
+}
+textarea{
+    height: 185px;
+}
+select{
+    margin: 25px 0 40px 0;
+    height: 50px;
+    width: 450px;
+    font-size: 1.05em;
+    border-radius: 5px;
+    border: 2px solid var(--yellow);
+    padding: 10px;
+}
+#from-selector{
+    width: 150px;
+    height: 40px;
+    margin-right: 50px;
+    margin-left: 10px;
+}
+#till-selector{
+    width: 150px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+/* Add Restaurant button */
+#addBtn{
+    height: 50px;
+    width: 160px;
+    font-size: 1em;
+    background-color: #dfb541;
+    border-radius: 8px;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-top: 45px;
+}
+

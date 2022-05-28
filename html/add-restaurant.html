@@ -10,43 +10,72 @@
 </head>
 <body>
     <section>
-        <header>
+        <div id="header">
             <div id="logo">
                 <span id="mo">mo</span><span id="ma">ma</span>to
             </div>
             <div id="profile-icon">
-                <i class="fa-regular fa-user"></i>
+                <i class="fa-solid fa-house"></i>
             </div>
-        </header>
+        </div>
         <!-- Form -->
         <div id="add-restaurant">
-            <form>
-                <input type="file" id="img" name="img" accept="image/*">
-                <span>Upload Image</span>
-                <br/>
-                <label>Restaurant Name:</label>
-                <input type="text">
-                <br/>
-                <label>Description:</label>
-                <input type="text">
-                <br/>
-                <label>Location:</label>
-                <input type="text">
-                <br/>
-                <label>Category:</label>
-                <select name="category" id="">
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
-                <br/>
-                <label>Opening Hours:</label>
-                From: <select></select> To: <select name="" id=""></select>
-                <br/>
-                <button>Add Restaurant</button>
-            </form>
+            <div id="form-div">
+                <form>
+                    <div id="image-div">
+                        <label for="inputTag" id="image-lbl">
+                        Select Image <br/>
+                        <i class="fa fa-2x fa-camera"></i>
+                        <input id="inputTag" type="file"/>
+                        <br/>
+                        <span id="imageName"></span>
+                        </label>
+                    </div>
+                    <br/>
+                    <div id="form-flex">
+                        <div id="form-left">
+                            <label>Restaurant Name:</label>
+                            <br/>
+                            <input type="text" name="rname">
+                            <br/>
+                            <label>Location:</label>
+                            <br/>
+                            <input type="text" name="location">
+                            <br/>
+                            <label>Category:</label>
+                            <br/>
+                            <select name="category" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        <div id="form-right">
+                            <label>Description:</label>
+                            <br/>
+                            <textarea name="description"></textarea>
+                            <br/>
+                            <label>Opening Hours:</label>
+                            <br>
+                            From: <select id="from-selector" name="from"></select> Till: <select name="till" id="till-selector"></select>
+                            <br/>
+                        </div>
+                    </div>
+                    <button id="addBtn">Add Restaurant</button>
+                </form>
+            </div>
         </div>
         <footer></footer>
     </section>
+    <script>
+        let input = document.getElementById("img");
+        let imageName = document.getElementById("imageName")
+
+        input.addEventListener("change", ()=>{
+            let inputImage = document.querySelector("input[type=file]").files[0];
+
+            imageName.innerText = inputImage.name;
+        })
+    </script>
 </body>
 </html>
