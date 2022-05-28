@@ -1,5 +1,6 @@
 @import url(global.css);
 
+/* Left corner style */
 #topleft{
     width: 300px;
     height: 300px;
@@ -11,13 +12,14 @@
     top: 0;
     left:0;
 }
-#shape{
+
+/* Right corner style */
+#circle-right{
     width: 350px;
     height: 350px;
     border-radius: 0 0 0 350px ;
      -moz-border-radius: 0 0 0 350px;
      -webkit-border-radius: 0 0 0 350px; 
-    /* background-color: #efc142;#facf5a; #f9c63b */
     position: absolute;
     top: 0;
     right: 0;
@@ -25,6 +27,7 @@
     border-top: none;
     border-right: none;
 }
+
 #plate{
     position: absolute;
     right: 3%;
@@ -33,7 +36,7 @@
     height: 300px;
 }
 
-#driedh{
+#driedherbs{
     width: 150px;
     min-height: 150px;
     position: absolute;
@@ -41,6 +44,7 @@
     top: 15.5%;
     overflow: hidden;
 }
+
 #greenleaf{
     width: 100px;
     min-height: 50px;
@@ -48,21 +52,16 @@
     right: 10%;
     top: 2%
 }
-#side img{
-    width: 300px;
-    height: 600px;
-    position: absolute;
-    left: 0;
-    top: 0;
-} 
 
- h1{ 
+/* Title */
+h1{ 
     font-size: 9em;
     text-align: center;
     margin-bottom: 30px;
     margin-top: 3vh;
 }
 
+/* Sign Up */
 #main-div{
     margin: 0 auto;
     margin-top: 70px;
@@ -71,34 +70,33 @@
 #sign-up-div{
     width: 100%;
     margin: 0 auto;
-    font-weight: bold;
     font-size: 1.1em;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 }
 
 h2{
-    font-size: 2.7em;
+    font-size: 2.5em;
     margin-bottom: 30px;
-    color: var(--yellow);
+    color: black;
 }
 
 .txtbox{
     margin: 10px 0 30px;
-    height: 60px;
-    width: 600px;
-    font-size: 1.2em;
+    height: 55px;
+    width: 550px;
+    font-size: 1em;
     border-radius: 8px;
     border: 2px solid var(--darker-yellow);
     padding: 10px;
 }
 
 .radio{
-    margin: 10px 30px 30px 5px;
+    margin: 20px 40px 40px 7px;
 }
 
 #btn-sign-up{
     height: 43px;
-    width: 150px;
+    width: 195px;
     font-size: 1em;
     margin-bottom: 20px;
     background-color: var(--darker-yellow);
@@ -116,9 +114,6 @@ h2{
 
 #btn-sign-in:link{
     text-decoration: none;
-}
-form{
-    margin-bottom: 50px;
 }
 
 #bottom{
