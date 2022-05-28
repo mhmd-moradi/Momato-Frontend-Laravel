@@ -16,7 +16,7 @@ section{
 }
 
 #header{
-    margin: 18px 0 50px 45px;
+    margin: 18px 0 30px 45px;
 }
 
 /* Logo */
@@ -40,23 +40,34 @@ section{
     font-size: 2em;
 }
 
+/* Reviews */
+h1{
+    margin: 0 auto;
+    width: 59%;
+    text-decoration: underline;
+    margin-bottom: 40px;
+    font-size: 1.9em;
+    font-weight: 400;
+    color: #2a2222;
+}
+
 /* <--User Review Card--> */
 .user-div{
     margin: 0 auto;
     width: 60%;
-    height: 150px;
+    height: 125px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     /* box-shadow: rgba(245, 190, 38, 0.35) 0px 5px 15px; */
     /* box-shadow: rgba(110, 175, 62, 0.35) 0px 5px 15px; */
     border-radius: 20px;
     margin-bottom: 75px;
-    min-height: 10em;
-    
+    position: relative;
 }
 
 /* User profile picture */
 .user-profile{
-    height: 100px;
+    height: 75px;
+    width: 75px;
     border-radius: 50%;
     border: 2px solid var(--yellow);
 }
@@ -64,33 +75,51 @@ section{
     display: flex;
     flex-direction: column;
     float: left;
-    padding: 15px;
+    padding: 15px 10px 15px 20px;
 }
 
 /* Username */
 .username{
-    font-size: 1.2em;
+    font-size: 1.1em;
     color:#443b3b;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 7px;
 }
 
 /* text review */
 
 .user-div p{
     font-size: 1.2em;
-    padding: 15px 15px 0 15px;
-    height: 75%;
-    width: 70%;
+    padding: 20px 15px 0 10px;
+    max-height: 75%;
+    width: 78%;
     color:#2a2222;
     overflow-y:auto;
     text-align: justify;
     line-height: 1.2em;
 }
 
+/* Icons */
+.icons{
+    float: right;
+    padding-right: 20px;
+    font-size: 2.5em;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -22px;
+}
+.check{
+    color: var(--green);
+    padding-right: 20px;
+}
+.cross{
+    color: #e93333;
+}
+
 /* Footer */
 footer{
     color: gray;
     font-size: 0.8em;
-    text-align: center;
+    text-align: center;  
 }
