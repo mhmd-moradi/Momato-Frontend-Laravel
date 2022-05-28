@@ -5,3 +5,55 @@
     --background:#f8f8f8;
     font-family: "GT Eesti", Helvetica, Arial, sans-serif;
 }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--background);
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+#header{
+    margin: 18px 0 30px 45px;
+}
+
+/* Logo */
+#mo{
+    color: var(--yellow);
+}
+#ma{
+    color: var(--green);
+}
+#logo{
+    font-size: 2em;
+    font-weight: bold;
+    float: left;
+}
+
+/* Home Icon */
+#home-icon{
+    float: right;
+    margin-right: 45px;
+    color: var(--darker-yellow);
+    font-size: 2em;
+}
+
+/* Footer */
+footer{
+    color: gray;
+    font-size: 0.8em;
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    left: 40%;
+}

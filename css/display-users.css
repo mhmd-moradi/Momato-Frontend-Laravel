@@ -1,0 +1,55 @@
+@import url(global.css);
+/* Reviews */
+h1{
+    margin: 0 auto;
+    width: 849px;
+    text-decoration: underline;
+    margin-bottom: 40px;
+    font-size: 1.9em;
+    font-weight: 400;
+    color: #2a2222;
+}
+
+/* <--User Review Card--> */
+.user-div{
+    margin: 0 auto;
+    width: 850px;
+    height: 260px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* box-shadow: rgba(245, 190, 38, 0.35) 0px 5px 15px; */
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 1.5%;
+    margin-bottom: 50px;
+}
+
+/* User profile picture */
+.user-profile{
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid var(--yellow);
+    margin: 0 auto;
+}
+
+/* Image Div */
+.image{
+    margin-right: 13%;
+}
+
+/* Info Div */
+.info{
+    font-size: 1.5em;
+    color:#443b3b;
+    text-align: center;
+    display: flex;
+    margin-top: 45px;
+}
+.user-div span{
+    float: left;
+    margin-left: 20%;
+}
+.user-div label{
+    float: left;
+    font-weight: bold;
+}
