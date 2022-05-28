@@ -12,7 +12,8 @@ body{
 
 section{
     display: flex;
-    flex-direction: column;}
+    flex-direction: column;
+}
 
 #header{
     margin: 18px 0 50px 45px;
@@ -31,8 +32,8 @@ section{
     float: left;
 }
 
-/* Profile Icon */
-#profile-icon{
+/* Home Icon */
+#home-icon{
     float: right;
     margin-right: 45px;
     color: var(--darker-yellow);
@@ -126,8 +127,8 @@ select{
 
 /* Footer */
 footer{
-    text-align: center;
     color: gray;
-    margin-top: 85px;
     font-size: 0.8em;
+    text-align: center;
+    margin-top: 85px;
 }
