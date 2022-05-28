@@ -42,14 +42,41 @@ section{
 
 /* <--User Review Card--> */
 .user-div{
-    text-align: center;
     margin: 0 auto;
     width: 60%;
-    height: 250px;
-    box-shadow: rgba(245, 190, 38, 0.35) 0px 5px 15px;
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* box-shadow: rgba(245, 190, 38, 0.35) 0px 5px 15px; */
     /* box-shadow: rgba(110, 175, 62, 0.35) 0px 5px 15px; */
     border-radius: 20px;
-    margin-bottom: 80px;
+    margin-bottom: 75px;
+    min-height: 10em;
+    position: relative
+}
+
+/* User profile picture */
+.user-profile{
+    height: 150px;
+    border-radius: 50%;
+    float: left;
+    border: 2px solid var(--yellow);
+    margin: 0;
+    position: absolute;
+    top: 100px;
+    transform: translate(15px, -50%)
+    
+}
+
+/* Username */
+.username{
+    float: left;
+    font-size: 1.3em;
+    margin: 0;
+    position: absolute;
+    top: 100px;
+    transform: translate(180px, -50%);
+    color:#443b3b;
+    
 }
 
 /* Footer */
