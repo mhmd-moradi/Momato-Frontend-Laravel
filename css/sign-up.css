@@ -4,35 +4,35 @@
     font-size: 9em;
     text-align: center;
     margin-bottom: 30px;
+    margin-top: 3vh;
 }
-/*
-p{
-    font-size: 3.5em;
-    font-weight: bold;
-    text-align: center;
-} */
 
-/* #text{
-    text-align: center;
-} */
-#right-sign-up{
-    width: 27%;
+#main-div{
     margin: 0 auto;
+    margin-top: 70px;
 }
 
-#right-sign-up h2{
-    color: #f5be26;
+#sign-up-div{
+    width: 100%;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 50px;
+}
+
+h2{
     font-size: 2.7em;
     margin-bottom: 30px;
+    color: var(--yellow);
 }
 
 .txtbox{
     margin: 10px 0 30px;
-    height: 50px;
-    width: 500px;
+    height: 60px;
+    width: 600px;
     font-size: 1.2em;
     border-radius: 8px;
-    border: 2px solid #e3b534;
+    border: 2px solid var(--darker-yellow);
     padding: 10px;
 }
 
@@ -42,18 +42,18 @@ p{
 
 #btn-sign-up{
     height: 43px;
-    width: 110px;
+    width: 150px;
     font-size: 1em;
     margin-bottom: 20px;
-    background-color: #dfb541;
+    background-color: var(--darker-yellow);
     border-radius: 8px;
-    border: 1px solid white;
+    border: none;
     color: white;
     cursor: pointer;
 }
 #btn-sign-in{
     margin-left: 10px;
-    color: #f5be26;
+    color: var(--yellow);
     font-size: 1.1em;
     font-weight: bold;
 }
@@ -63,4 +63,8 @@ p{
 }
 form{
     margin-bottom: 50px;
+}
+
+#bottom{
+    text-align: center;
 }
