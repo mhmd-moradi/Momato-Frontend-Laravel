@@ -60,7 +60,6 @@ h1{
     height: 125px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     /* box-shadow: rgba(245, 190, 38, 0.35) 0px 5px 15px; */
-    /* box-shadow: rgba(110, 175, 62, 0.35) 0px 5px 15px; */
     border-radius: 20px;
     margin-bottom: 75px;
     position: relative;
@@ -88,8 +87,7 @@ h1{
     padding-top: 7px;
 }
 
-/* text review */
-
+/* Text review */
 .user-div p{
     font-size: 1.2em;
     padding: 20px 15px 0 10px;
