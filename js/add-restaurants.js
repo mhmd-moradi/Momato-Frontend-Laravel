@@ -11,9 +11,18 @@ window.onload = function () {
     const addBtn = document.getElementById("addBtn");
     let base64String = "";
 
+
     image.addEventListener("change", getImage);
 
-
+    function checkFields() {
+        console.log(image.files.length);
+        console.log(name.value);
+        console.log(location.value);
+        if (image.files.length != 0 && name.value != "" && location.value != "")
+            return true;
+        return false;
+    }
+    
     function getImage() {
         var file = document.querySelector('input[type=file]')['files'][0];
         var reader = new FileReader();
@@ -25,6 +34,5 @@ window.onload = function () {
         }
         reader.readAsDataURL(file);
     }
-
 
 }
