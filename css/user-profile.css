@@ -14,9 +14,10 @@
 #form{
     width: 550px;
     margin: 0 auto;
+    margin-bottom: 30px;
 }
 
-.txtbox{
+/* .txtbox{
     margin: 10px 0 30px;
     height: 55px;
     width: 550px;
@@ -24,20 +25,32 @@
     border-radius: 8px;
     border: 2px solid var(--darker-yellow);
     padding: 10px;
+} */
+
+.txtbox{
+    margin: 15px 0 40px 0;
+    height: 50px;
+    width: 550px;
+    font-size: 1.05em;
+    box-shadow: rgba(0, 0, 0, 0.29) 0px 3px 8px;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
 }
 
 .radio{
     margin: 20px 40px 40px 7px;
 }
 
-#btn-sign-up{
+#btn-edit{
     height: 43px;
-    width: 195px;
+    width: 150px;
     font-size: 1em;
     margin-bottom: 20px;
-    background-color: var(--darker-yellow);
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.29) 0px 3px 8px;
     border-radius: 8px;
-    border: none;
-    color: white;
+    border: 2px solid var(--darker-yellow);
+    color: var(--darker-yellow);
     cursor: pointer;
 }
