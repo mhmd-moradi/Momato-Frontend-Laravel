@@ -8,4 +8,36 @@
     border-radius: 50%;
     border: 5px solid var(--yellow);
     width: 250px;
+    margin-bottom: 40px;
+}
+
+#form{
+    width: 550px;
+    margin: 0 auto;
+}
+
+.txtbox{
+    margin: 10px 0 30px;
+    height: 55px;
+    width: 550px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 2px solid var(--darker-yellow);
+    padding: 10px;
+}
+
+.radio{
+    margin: 20px 40px 40px 7px;
+}
+
+#btn-sign-up{
+    height: 43px;
+    width: 195px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    background-color: var(--darker-yellow);
+    border-radius: 8px;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
