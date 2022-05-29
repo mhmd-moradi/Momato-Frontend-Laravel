@@ -12,15 +12,16 @@ h2{
 }
 
 #btn-sign-in{
-    height: 43px;
+    height: 50px;
     width: 150px;
     font-size: 1em;
     margin-bottom: 35px;
-    background-color: #dfb541;
+    background-color: #e7bc46;
     border-radius: 8px;
     border: 1px solid white;
     color: white;
     cursor: pointer;
+    font-weight: 100;
 }
 
 #btn-sign-up2{
@@ -39,4 +40,10 @@ h2{
     color: #f5be26;
     font-size: 1.1em;
     font-weight: bold;
+}
+
+.txtbox{
+    margin: 10px 0 50px;
+    height: 60px;
+    width: 570px;
 }
