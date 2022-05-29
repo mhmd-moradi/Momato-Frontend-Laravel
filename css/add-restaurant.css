@@ -44,14 +44,10 @@ section{
 
 /* Form */
 #form-div{
-    width: 50%;
+    width: 26%;
     margin: 0 auto;
-}
-#form-flex{
-    display: flex;
-}
-#form-left{
-    margin-right: 50px;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
 /* Upload Image */
@@ -60,8 +56,8 @@ section{
     padding:3%;
     border:2px solid var(--yellow);
     border-radius: 8px;
-    height: 170px;
-    width: 170px;
+    height: 150px;
+    width: 150px;
     display: block;
     margin: 0 auto;
     margin-bottom: 50px;
@@ -78,11 +74,12 @@ section{
 label{
     font-weight: bold;
     font-size: 1.05em;
+    float: left;
 }
 input, textarea{
     margin: 25px 0 40px 0;
     height: 50px;
-    width: 450px;
+    width: 500px;
     font-size: 1.05em;
     border-radius: 5px;
     border: 2px solid var(--yellow);
@@ -94,22 +91,35 @@ textarea{
 select{
     margin: 25px 0 40px 0;
     height: 50px;
-    width: 450px;
+    width: 500px;
     font-size: 1.05em;
     border-radius: 5px;
     border: 2px solid var(--yellow);
     padding: 10px;
 }
 #from-selector{
-    width: 150px;
+    width: 80px;
     height: 40px;
-    margin-right: 50px;
     margin-left: 10px;
 }
 #till-selector{
-    width: 150px;
+    width: 80px;
     height: 40px;
     margin-left: 10px;
+}
+
+#till{
+    margin-left:10px;
+}
+
+#hours{
+    float: left;
+}
+
+.am{
+    width: 70px;
+    margin-left: 10px;
+    height: 40px;
 }
 
 /* Add Restaurant button */
@@ -124,7 +134,7 @@ select{
     cursor: pointer;
     display: block;
     margin: 0 auto;
-    margin-top: 45px;
+    margin-top: 15px;
 }
 
 /* Footer */
