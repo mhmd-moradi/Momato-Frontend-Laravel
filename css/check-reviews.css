@@ -113,21 +113,27 @@ h1{
         width: 400px;
         font-size: 1.7em;
     }
+    .pic-name{
+        padding-bottom:0; 
+    }
+    .username{
+        padding-top: 12px;
+        padding-bottom: 5px;
+    }
     .user-div{
         width: 400px;
-        height: 380px;
+        height: 330px;
     }
     .user-div p{
-        max-height: 60%;
-        width: 80%;
+        max-height: 150px;
+        width: 90%;
         margin: 0 auto;
+        padding-bottom: 10px;
     }
     .icons{
         top: 85%;
         right: 0;
         left: 0;
-    }
-    .icons{
         float: none;
         font-size: 2.5em;
         position: none;
