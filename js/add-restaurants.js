@@ -11,7 +11,15 @@ window.onload = function () {
     const addBtn = document.getElementById("addBtn");
     let base64String = "";
 
+    addBtn.addEventListener("click", addRestaurant);
+
     image.addEventListener("change", getImage);
+
+    function addRestaurant() {
+        if (checkFields()){
+            insertRestaurant();
+        }      
+    }
 
     function checkFields() {
         console.log(image.files.length);
