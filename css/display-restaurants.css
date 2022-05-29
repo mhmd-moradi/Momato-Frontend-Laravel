@@ -97,3 +97,6 @@
     flex-direction: row;
 }
 
+.restaurant .location{
+    margin-top: 10px;
+}
