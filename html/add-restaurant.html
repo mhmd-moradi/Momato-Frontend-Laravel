@@ -34,15 +34,15 @@
                     <br/>
                     <label>Restaurant Name:</label>
                     <br/>
-                    <input type="text" name="rname">
+                    <input id="name" type="text" name="rname">
                     <br/>
                     <label>Location:</label>
                     <br/>
-                    <input type="text" name="location">
+                    <input id="location" type="text" name="location">
                     <br/>
                     <label>Category:</label>
                     <br/>
-                    <select name="category" id="">
+                    <select name="category" id="category">
                         <option value=""></option>
                         <option value=""></option>
                         <option value=""></option>
@@ -56,7 +56,7 @@
                     <br>
                     <div id="hours">
                         From: 
-                        <select id="from-selector" name="from">
+                        <select id="opening" name="from">
                             <option value="1:00">1:00</option>
                             <option value="2:00">2:00</option>
                             <option value="3:00">3:00</option>
@@ -70,11 +70,11 @@
                             <option value="11:00">11:00</option>
                             <option value="12:00">12:00</option>
                         </select>
-                        <select name="am" class="am">
+                        <select id="opening-daytime" name="am" class="am">
                             <option value="am">AM</option>
                             <option value="pm">PM</option>
                         </select>
-                         <span id="till">Till: </span>
+                         <span id="closing">Till: </span>
                          <select name="till" id="till-selector">
                             <option value="1:00">1:00</option>
                             <option value="2:00">2:00</option>
@@ -89,7 +89,7 @@
                             <option value="11:00">11:00</option>
                             <option value="12:00">12:00</option>
                          </select>
-                         <select name="am" class="am">
+                         <select id="closing-daytime" name="am" class="am">
                             <option value="am">AM</option>
                             <option value="pm">PM</option>
                         </select>

@@ -97,18 +97,18 @@ select{
     border: 2px solid var(--yellow);
     padding: 10px;
 }
-#from-selector{
+#opening{
     width: 80px;
     height: 40px;
     margin-left: 10px;
 }
-#till-selector{
+#closing-selector{
     width: 80px;
     height: 40px;
     margin-left: 10px;
 }
 
-#till{
+#closing{
     margin-left:10px;
 }
 
