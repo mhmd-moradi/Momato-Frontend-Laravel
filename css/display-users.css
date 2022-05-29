@@ -53,3 +53,24 @@ h1{
     float: left;
     font-weight: bold;
 }
+
+/* Media Query */
+@media only screen and (max-width: 1000px) {
+    .user-div{
+        flex-direction: column;
+        width: 450px;
+        height: 550px;
+    }
+    .image{
+        height: 70%;
+        margin-right: 0%;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+    .info{
+        margin: 15px auto;
+    }
+    h1{
+        width: 450px;
+    }
+}

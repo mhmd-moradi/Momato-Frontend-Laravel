@@ -1,0 +1,77 @@
+@import url(global.css);
+
+/* Profile Picture */
+#profile-pic{
+    text-align: center;
+}
+
+#profile-pic img{
+    border-radius: 50%;
+    border: 5px solid var(--yellow);
+    width: 250px;
+    margin-bottom: 40px;
+}
+
+/* Profile Picture */
+#form{
+    width: 550px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.txtbox{
+    margin: 15px 0 40px 0;
+    height: 50px;
+    width: 550px;
+    font-size: 1.05em;
+    box-shadow: rgba(0, 0, 0, 0.29) 0px 3px 8px;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+}
+
+.icon{
+    color: var(--yellow);
+    font-size: 25px;
+    float: right;
+    position: relative;
+    top: 52px;
+    right: 15px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: url("../assets/images/white.png"); 
+}
+
+.radio{
+    margin: 20px 40px 40px 7px;
+}
+
+/* Edit button */
+#btn-edit{
+    height: 43px;
+    width: 150px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.29) 0px 3px 8px;
+    border-radius: 8px;
+    border: 2px solid var(--darker-yellow);
+    cursor: pointer;
+}
+
+/* Media Query */
+@media only screen and (max-width: 650px) {
+    #form{
+        width: 425px;
+    }
+    .txtbox{
+        width: 425px;
+    }
+    #profile-pic img{
+        width: 240px;
+    }
+}

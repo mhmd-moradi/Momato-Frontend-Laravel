@@ -55,5 +55,6 @@ footer{
     position: absolute;
     bottom: 5px;
     text-align: center;
-    left: 40%;
+    right: 0;
+    left: 0;
 }

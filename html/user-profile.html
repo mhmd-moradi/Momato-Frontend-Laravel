@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page - momato</title>
+    <link rel="stylesheet" href="../css/user-profile.css">
+    <script src="https://kit.fontawesome.com/d8969b722a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section>
+        <!-- Nav Start -->
+        <div id="header">
+            <div id="logo">
+                <span id="mo">mo</span><span id="ma">ma</span>to
+            </div>
+            <div id="home-icon">
+                <i class="fa-solid fa-house"></i>
+            </div>
+        </div>
+        <!-- Nav End -->
+
+        <div id="conatiner">        
+            <!-- Profile Picture Start -->
+            <div id="profile-pic">
+                <img src="../assets/images/user4.jpg">
+            </div>
+            <!-- Profile Picture End -->
+
+            <!-- Form Start -->
+            <div id="form">
+                <label>First Name:</label> 
+                <i class="fa-regular fa-user icon"></i>
+                <input type="text" name="fname" id="fname" value="Stacey" class="txtbox">
+                <br>
+                <i class="fa-regular fa-user icon"></i>
+                <label>Last Name:</label> <br>
+                <input type="text" name="lname" id="lname" value="Jones" class="txtbox">
+                <br>
+                <i class="fa-regular fa-envelope icon"></i>
+                <label>Email:</label> <br>
+                <input type="email" name="email" id="email" value="stacey_jones@gmail.com" class="txtbox">
+                <br>
+                <i class="fa-solid fa-lock icon"></i>
+                <label>Password:</label> <br>
+                <input type="password" name="pass" id="pass" value="......." class="txtbox">
+                <br>
+                <i class="fa-solid fa-calendar-days icon"></i>
+                <label>Date of Birth:</label> <br>
+                <input type="date" id="date" value="29/4/1988" class="txtbox date-input">
+                <br>
+                <label>Gender:</label> <br>
+                Male
+                <input type="radio" name="gender" value="male" class="radio">
+                Female
+                <input type="radio" name="gender" vale="female" class="radio" checked>
+                Other
+                <input type="radio" name="gender" vale="female" class="radio">
+                <br>
+                <button id="btn-edit">Edit Profile</button>
+            </div>
+            <!-- Form End -->
+
+        </div>
+
+        <!-- Footer Start -->
+        <footer>
+            <p>Privacy Policy & Terms of Service | © 2022 Momato, All Rights Reserved</p>
+        </footer>
+        <!-- Footer End -->
+
+    </section>
+    <!-- js -->
+    <script src="../js/user-profile.js"></script>
+</body>
+</html>
