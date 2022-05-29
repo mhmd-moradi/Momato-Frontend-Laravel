@@ -62,3 +62,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border: 2px solid var(--darker-yellow);
     cursor: pointer;
 }
+
+/* Media Query */
+@media only screen and (max-width: 650px) {
+    #form{
+        width: 425px;
+    }
+    .txtbox{
+        width: 425px;
+    }
+    #profile-pic img{
+        width: 240px;
+    }
+}
