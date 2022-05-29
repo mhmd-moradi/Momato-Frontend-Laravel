@@ -1,16 +1,20 @@
 @import url(sign-up.css);
 
+/* Text under momato */
 #header2 p{
     font-size: 3.5em;
     font-weight: bold;
     text-align: center;
 }
+
+/* Sign In word*/
 h2{
    color: #f5be26;
     font-size: 2.7em;
     margin-bottom: 50px; 
 }
 
+/* Sign in button */
 #btn-sign-in{
     height: 50px;
     width: 150px;
@@ -24,6 +28,7 @@ h2{
     font-weight: 100;
 }
 
+/* Sign up button */
 #btn-sign-up2{
     margin-left: 10px;
     color: #f5be26;
@@ -42,6 +47,7 @@ h2{
     font-weight: bold;
 }
 
+/* Text box */
 .txtbox{
     margin: 10px 0 50px;
     height: 60px;
