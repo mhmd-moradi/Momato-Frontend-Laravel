@@ -2,12 +2,12 @@
 
 /* Left corner style */
 #topleft{
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     background: #efc142;
-    border-radius: 0 0 300px 0;
-    -moz-border-radius: 0 0 300px 0;
-    -webkit-border-radius: 0 0 300px 0;
+    border-radius: 0 0 250px 0;
+    -moz-border-radius: 0 0 250px 0;
+    -webkit-border-radius: 0 0 250px 0;
     position: absolute;
     top: 0;
     left:0;
@@ -15,11 +15,11 @@
 
 /* Right corner style */
 #circle-right{
-    width: 350px;
-    height: 350px;
-    border-radius: 0 0 0 350px ;
-     -moz-border-radius: 0 0 0 350px;
-     -webkit-border-radius: 0 0 0 350px; 
+    width: 300px;
+    height: 300px;
+    border-radius: 0 0 0 300px ;
+     -moz-border-radius: 0 0 0 300px;
+     -webkit-border-radius: 0 0 0 300px; 
     position: absolute;
     top: 0;
     right: 0;
@@ -30,27 +30,19 @@
 
 #plate{
     position: absolute;
-    right: 3%;
-    top: 4%;
-    width: 300px;
-    height: 300px;
+    right: 50px;
+    top: 3%;
+    width: 250px;
+    height: 250px;
 }
 
 #driedherbs{
-    width: 150px;
-    min-height: 150px;
+    width: 120px;
+    min-height: 120px;
     position: absolute;
-    right: 10%;
-    top: 15.5%;
+    right: 180px;
+    top: 11%;
     overflow: hidden;
-}
-
-#greenleaf{
-    width: 100px;
-    min-height: 50px;
-    position: absolute;
-    right: 10%;
-    top: 2%
 }
 
 /* Title */
@@ -118,4 +110,116 @@ h2{
 
 #bottom{
     text-align: center;
+}
+
+/* Media Query */
+@media only screen and (max-width: 1300px) {
+    #topleft{
+        width: 220px;
+        height: 220px;
+        border-radius: 0 0 220px 0;
+        -moz-border-radius: 0 0 220px 0;
+        -webkit-border-radius: 0 0 220px 0;
+    }
+    #circle-right{
+        width: 250px;
+        height: 250px;
+        border-radius: 0 0 0 250px ;
+         -moz-border-radius: 0 0 0 250px;
+         -webkit-border-radius: 0 0 0 250px;
+        border: 60px solid #efc142;
+        border-top: none;
+        border-right: none;
+    }
+    #plate{
+        width: 200px;
+        height: 200px;
+        top: 2.7%;
+        right: 50px;
+    }
+    #driedherbs{
+        right: 140px;
+        width: 110px;
+        top: 8.5%;
+    }
+    h1{ 
+        font-size: 8em;
+    }
+    .txtbox{
+        height: 50px;
+        width: 475px;
+    }
+    #btn-sign-up{
+        height: 43px;
+        width: 150px;
+    }
+}
+@media only screen and (max-width: 1050px) {
+    #topleft{
+        width: 150px;
+        height: 150px;
+        border-radius: 0 0 150px 0;
+        -moz-border-radius: 0 0 150px 0;
+        -webkit-border-radius: 0 0 150px 0;
+    }
+    #circle-right{
+        width: 150px;
+        height: 150px;
+        border-radius: 0 0 0 150px ;
+         -moz-border-radius: 0 0 0 150px;
+         -webkit-border-radius: 0 0 0 150px;
+        border: 60px solid #efc142;
+        border-top: none;
+        border-right: none;
+    }
+    #plate{
+        width: 150px;
+        height: 150px;
+        top: 1%;
+        right: 10px;
+    }
+    #driedherbs{
+        width: 110px;
+        top: 3.4%;
+        right: 55px;
+    }
+    h1{ 
+        font-size: 7.8em;
+    }
+}
+@media only screen and (max-width: 780px) {
+    #driedherbs,#plate{
+        display: none;
+    }
+    #topleft{
+        width: 50px;
+        height: 150px;
+        border-radius: 0 150px 150px 0;
+        -moz-border-radius: 0 150px 150px 0;
+        -webkit-border-radius: 0 150px 150px 0;
+    }
+    #circle-right{
+        width: 50px;
+        height: 150px;
+        background: #efc142;
+        border-radius: 150px 0 0 150px;
+        -moz-border-radius: 150px 0 0 150px;
+        -webkit-border-radius: 150px 0 0 150px;
+        border: none;
+    }
+    h1{ 
+        font-size: 7.5em;
+    }
+    .txtbox{
+        width: 450px;
+    }
+}
+
+@media only screen and (max-width: 655px) {
+    h1{ 
+        font-size: 6em;
+    }
+    .txtbox{
+        width: 400px;
+    }
 }
