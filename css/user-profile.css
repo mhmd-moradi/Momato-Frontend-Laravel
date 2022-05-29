@@ -1,5 +1,6 @@
 @import url(global.css);
 
+/* Profile Picture */
 #profile-pic{
     text-align: center;
 }
@@ -11,21 +12,12 @@
     margin-bottom: 40px;
 }
 
+/* Profile Picture */
 #form{
     width: 550px;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
-
-/* .txtbox{
-    margin: 10px 0 30px;
-    height: 55px;
-    width: 550px;
-    font-size: 1em;
-    border-radius: 8px;
-    border: 2px solid var(--darker-yellow);
-    padding: 10px;
-} */
 
 .txtbox{
     margin: 15px 0 40px 0;
@@ -38,7 +30,7 @@
     padding: 10px;
 }
 
-i{
+.icon{
     color: var(--yellow);
     font-size: 25px;
     float: right;
@@ -58,6 +50,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin: 20px 40px 40px 7px;
 }
 
+/* Edit button */
 #btn-edit{
     height: 43px;
     width: 150px;
@@ -67,6 +60,5 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     box-shadow: rgba(0, 0, 0, 0.29) 0px 3px 8px;
     border-radius: 8px;
     border: 2px solid var(--darker-yellow);
-    color: var(--darker-yellow);
     cursor: pointer;
 }
