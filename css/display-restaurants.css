@@ -1,0 +1,102 @@
+@import url(global.css);
+
+#intro{
+    width: 100%;
+    height: 590px;
+    background-image: url("../assets/images/restaurants-banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 50%;
+}
+
+#restaurants-display{
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.category{
+    margin-top: 40px;
+}
+
+.category-title{
+    font-size: 32px;
+    font-weight: 500;
+    padding-left: 40px;
+}
+
+.category-restaurants{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.category-restaurants::-webkit-scrollbar {
+    display: none;
+}
+
+.restaurant{
+    flex: 0 0 350px;
+    height: 350px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* box-shadow: rgba(245, 190, 38, 0.35) 0px 5px 15px; */
+    border-radius: 20px;
+    margin-left: 50px;
+    scroll-snap-align: center;
+}
+
+.restaurant:last-child{
+    margin-right: 50px;
+}
+
+.restaurant-info{
+    padding: 10px;
+}
+
+.restaurant img{
+    width: 100%;
+    height: 248px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.restaurant h3 , h4{
+    font-weight: 400;
+}
+
+.restaurant h3{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.rating p{
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 15px;
+    margin: 5px auto;
+}
+
+.name-rating{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.rating{
+    width: 50px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+}
+
+.restaurant .location{
+    margin-top: 10px;
+}
