@@ -9,3 +9,9 @@
     background-position: 0% 50%;
 }
 
+#restaurants-display{
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
