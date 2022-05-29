@@ -24,3 +24,32 @@
     font-weight: 500;
     padding-left: 40px;
 }
+
+.category-restaurants{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.category-restaurants::-webkit-scrollbar {
+    display: none;
+}
+
+.restaurant{
+    flex: 0 0 350px;
+    height: 350px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* box-shadow: rgba(245, 190, 38, 0.35) 0px 5px 15px; */
+    border-radius: 20px;
+    margin-left: 50px;
+    scroll-snap-align: center;
+}
+
+.restaurant:last-child{
+    margin-right: 50px;
+}
+
