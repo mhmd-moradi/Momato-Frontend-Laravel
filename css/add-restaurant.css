@@ -42,9 +42,21 @@ section{
     font-size: 2em;
 }
 
+/* Images */
+#images div{
+    float: left;
+    height: 170px;
+    width: 170px;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-left: 37px;
+    margin-bottom: 30px;
+}
+
+
 /* Form */
 #form-div{
-    width: 26%;
+    width: 500px;
     margin: 0 auto;
     margin-bottom: 40px;
     text-align: center;
@@ -53,14 +65,14 @@ section{
 /* Upload Image */
 #image-div{
     text-align:center;
-    padding:3%;
-    border:2px solid var(--yellow);
+    padding:4%;
+    box-shadow: rgba(0, 0, 0, 0.29) 0px 3px 8px;
     border-radius: 8px;
-    height: 150px;
+    height: 80px;
     width: 150px;
     display: block;
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 
 #inputTag{
@@ -81,12 +93,14 @@ input, textarea{
     height: 50px;
     width: 500px;
     font-size: 1.05em;
-    border-radius: 5px;
-    border: 2px solid var(--yellow);
+    box-shadow: rgba(0, 0, 0, 0.29) 0px 3px 8px;
+    border-radius: 8px;
+    border: none;
     padding: 10px;
 }
 textarea{
     height: 185px;
+    resize: none;
 }
 select{
     margin: 25px 0 40px 0;
@@ -94,7 +108,8 @@ select{
     width: 500px;
     font-size: 1.05em;
     border-radius: 5px;
-    border: 2px solid var(--yellow);
+    box-shadow: rgba(0, 0, 0, 0.29) 0px 3px 8px;
+    border: none;
     padding: 10px;
 }
 #from-selector{
@@ -129,12 +144,13 @@ select{
     font-size: 1em;
     background-color: #dfb541;
     border-radius: 8px;
-    border: 1px solid white;
     color: white;
     cursor: pointer;
     display: block;
     margin: 0 auto;
     margin-top: 15px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 /* Footer */
