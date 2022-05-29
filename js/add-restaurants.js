@@ -11,7 +11,6 @@ window.onload = function () {
     const addBtn = document.getElementById("addBtn");
     let base64String = "";
 
-
     image.addEventListener("change", getImage);
 
     function checkFields() {
@@ -35,4 +34,23 @@ window.onload = function () {
         reader.readAsDataURL(file);
     }
 
+    function insertRestaurant(){
+        let data = new FormData();
+        data.append('image', base64String);
+        data.append('name', name.value);
+        data.append('location', location.value);
+        data.append('category', category.value);
+        data.append('opening_time', opening.value + " " + opening_daytime.value);
+        data.append('closing_time', closing.value + " " + closing_daytime.value);
+        data.append('user', 3);
+        axios({
+            method: 'post',
+            url: 'http://localhost/Zomato-Backend/APIs/add_Restaurant.php',
+            data: data,
+        })
+        .then(function (response) {
+            console.log(response["data"]["success"]);
+            }
+        );
+    }
 }
