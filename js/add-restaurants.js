@@ -9,5 +9,22 @@ window.onload = function () {
     const closing = document.getElementById("closing");
     const closing_daytime = document.getElementById("closing-daytime");
     const addBtn = document.getElementById("addBtn");
- 
+    let base64String = "";
+
+    image.addEventListener("change", getImage);
+
+
+    function getImage() {
+        var file = document.querySelector('input[type=file]')['files'][0];
+        var reader = new FileReader();
+        console.log("next");         
+        reader.onload = function () {
+            base64String = reader.result.replace("data:", "").replace(/^.+,/, "");
+            imageBase64Stringsep = base64String;
+            console.log(base64String);
+        }
+        reader.readAsDataURL(file);
+    }
+
+
 }
