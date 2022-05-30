@@ -1,1 +1,7 @@
 @import url(global.css);
+
+#title{
+    font-size: 4em;
+    color: black;
+    text-align: center;
+}
