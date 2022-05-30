@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="../css/restaurant.css">
+    <script src="https://kit.fontawesome.com/d8969b722a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section>
+        <!-- Nav Start -->
+        <div id="header">
+            <div id="logo">
+                <span id="mo">mo</span><span id="ma">ma</span>to
+            </div>
+            <div id="home-icon">
+                <a href="user-profile.html"><i class="fa-solid fa-user"></i></a>
+            </div>
+            <div id="home-icon">
+                <a href="display-restaurants.html"><i class="fa-solid fa-home"></i></a>
+            </div>
+        </div>
+        <!-- Nav End -->
+
+        <div>
+            <!-- Retaurant Photo Start -->
+            <div id="res-pic-div">
+                <img src="../assets/images/white-brown.jpg" id="res-pic">
+            </div>
+            <!-- Retaurant Photo End -->
+
+            <!-- Restaurant Details Start -->
+            <div id="res-details">
+                <div id="left">
+                    <h2 id="res-name">Restaurant Name</h2><br>
+                    <div id="location-div">
+                        <i class="fa-solid fa-location-dot"></i> <span id="location">Location</span><br>
+                    </div>
+                    <div id="duration-div">
+                        <i class="fa-solid fa-clock"></i> From: <span id="from"><b>1:00 pm</b></span> Till: <span is="till"><b>11:00 pm</b></span>
+                    </div>
+                </div>
+
+                <!-- Ratings Start -->
+                <div id="right">
+                    <div class="rating">
+                        <p>4.3 <i class="fa fa-star" aria-hidden="true"></i></p>
+                    </div>
+                    <div id="stars">
+                        <span class="fa fa-star checked" id="1"></span>
+                        <span class="fa fa-star checked" id=2></span>
+                        <span class="fa fa-star checked" id="3"></span>
+                        <span class="fa fa-star" id="4"></span>
+                        <span class="fa fa-star" id="5"></span>
+                    </div>
+                </div>
+                <!-- Ratings End -->
+
+            </div>
+            <!-- Restaurant Details End -->
+
+            <!-- Restaurant Review Start -->
+            <div id="reviews-div">
+                <p id="review-p"><u>Reviews:</u></p>
+                <div id="reviews-container">
+                    <div class="user-div">
+                        <div class="pic-name-conatiner">
+                            <img src="/assets/images/user4.jpg" alt="" class="user-profile" id="profile">
+                            <span class="username" id="username">User Name</span>
+                        </div>
+                        <div class="review-text">
+                            <p id="review">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                Recusandae sunt fugit quae iste porro distinctio dolore explicabo enim ipsum 
+                                corporis hic fugiat aliquam animi,eos necessitatibus id maiores tempore ipsa!
+                            </p>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <!-- Restaurant Review Start -->
+
+            <!-- Add Review Start -->
+            <div id="container">
+                <div id="add-review-container">
+                    <!-- User photo -->
+                    <div id="current-user">
+                        <img src="/assets/images/user4.jpg" alt="" id="current-profile">
+                    </div>
+                    <!-- Review textbox -->
+                    <div id="new-review-div">
+                    <textarea name="new-review" id="new-review" cols="10" rows="10"></textarea>
+                    </div>
+                    <!-- Send icon -->
+                    <div id="send-div">
+                    <i class="fa-solid fa-share" id="send"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Review Start -->
+        </div>
+
+        <!-- Footer Start -->
+        <footer>
+            <p>Privacy Policy & Terms of Service | © 2022 Momato, All Rights Reserved</p>
+        </footer>
+        <!-- Footer End -->
+    </section>
+    <script src="../js/restaurant.js"></script>
+</body>
+</html>
