@@ -33,7 +33,7 @@ window.onload = function () {
             alert("Sign up failed!");
         }else{
             window.localStorage.setItem("id",response.data.user_id);
-            window.location.href = "display_restaurants.html";
+            window.location.href = "display-restaurants.html";
         }
         }
     );
