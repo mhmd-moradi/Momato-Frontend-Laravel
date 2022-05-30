@@ -127,3 +127,26 @@
 hr{
     margin: 0 30px;
 }
+
+#container{
+    width: 65%;
+    margin: 0 auto;
+}
+
+#add-review{
+    height: 75px;
+    width: 80%;
+    margin: 50px 0;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+}
+
+#current-profile{
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    border: 2px solid var(--yellow);
+    margin: 10px;
+    margin-left: 15px;
+}
