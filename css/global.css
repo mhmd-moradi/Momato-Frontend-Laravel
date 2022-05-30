@@ -47,6 +47,9 @@ section{
     color: var(--darker-yellow);
     font-size: 2em;
 }
+#home-icon a:link, #home-icon a:visited {
+    color: var(--darker-yellow);
+}
 
 /* Footer */
 footer{
