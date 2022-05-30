@@ -96,6 +96,7 @@
     width: 1200px;
     height: 120px;
     position: relative;
+    display: flex;
 }
 
 .pic-name-conatiner{
@@ -120,10 +121,14 @@
     padding-top: 7px;
 }
 
+.review-text{
+    width: 88%;
+    max-height: 75%;
+}
+
 .user-div p{
     padding: 20px 0px 0px 10px;
-    max-height: 75%;
-    width: 88%;
+    width: 100%;
     color:#2a2222;
     overflow-y:auto;
     text-align: justify;
@@ -195,3 +200,15 @@ hr{
     color: var(--yellow);
 }
 /* Add Review End */
+
+/* Media Query */
+@media only screen and (max-width: 1300px) {
+    #res-pic-div{
+        height: 300px;
+    }
+}
+@media only screen and (max-width: 850px) {
+    #res-pic-div{
+        height: 250px;
+    }
+}
