@@ -76,7 +76,7 @@
     margin: 0 auto;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin-top: 120px;
+    margin-top: 100px;
 }
 #reviews-container{
     overflow-y:auto;
@@ -150,6 +150,10 @@ hr{
     display: flex;
 }
 
+#current-user{
+    width: 70px;
+}
+
 #current-profile{
     height: 55px;
     width: 55px;
@@ -169,21 +173,25 @@ hr{
     width: 100%;
     height: 70%;
     font-size: 1.2em;
+    line-height: 1.05em;
     resize: none;
     border: none;
     border-radius: 50px;
-    padding: 20px;
+    padding: 15px 20px;
     overflow:hidden;
+    font-family: "GT Eesti", Helvetica, Arial, sans-serif;
 }
 
 /* Send Icons */
 #send-div{
     margin: 0 auto;
+    width: 70px;
 }
 
 #send{
-    font-size: 2em;
-    margin-top: 20px;
+    font-size: 1.8em;
+    margin-left: 20px;
+    margin-top: 25px;
     color: var(--yellow);
 }
 /* Add Review End */
