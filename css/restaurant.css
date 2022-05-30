@@ -46,7 +46,7 @@
     width: 50px;
     height: 25px;
     border-radius: 5px;
-    background-color: green;
+    background-color: #579728;
     display: flex;
     margin-left: auto;
 }
@@ -65,7 +65,7 @@
 }
 
 .checked{
-    color: orange;
+    color: #efb71d;
 }
 /* Restaurant Details End */
 
@@ -77,7 +77,12 @@
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-top: 120px;
+}
+#reviews-container{
     overflow-y:auto;
+    height: 290px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 #review-p{
