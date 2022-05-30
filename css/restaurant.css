@@ -1,1 +1,13 @@
 @import url(global.css);
+
+#res-pic{
+    height: 350px;
+    width: 65%;
+    margin: 0 auto;
+}
+#image{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
