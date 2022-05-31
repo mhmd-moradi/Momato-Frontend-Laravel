@@ -1,5 +1,7 @@
 window.onload = function () {
 
+    
+
     function getRestaurants(){
         let data = new FormData();
         axios({
@@ -10,6 +12,14 @@ window.onload = function () {
             for(let i=0; i < response["data"].length; i++){
                 console.log(response["data"][i].image);
                 createRestaurant(response["data"][i].restaurant_id, response["data"][i].image, response["data"][i].restaurant_name, "4.3", response["data"][i].location);
+            }
+
+            //restaurant onclick
+            const restaurants = document.getElementsByClassName("restaurant");
+            for(let i=0; i < restaurants.length; i++){
+                restaurants[i].addEventListener("click", function(){
+                    window.location.href = "restaurant.html?restaurant_id="+ this.id;
+                })
             }
         });
     }
@@ -57,6 +67,5 @@ window.onload = function () {
     }
 
     getRestaurants();
-
 
 }
