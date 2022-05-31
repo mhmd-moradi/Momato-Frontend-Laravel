@@ -5,13 +5,30 @@ window.onload = function () {
     function getReviews(){
         axios({
             method: 'get',
-            url: 'http://localhost/Momato/Momato-Backend/APIs/get_reviews.php',
+            url: 'http://localhost/Momato/Momato-Backend/APIs/get_onhold_reviews.php',
         })
         .then(function (response) {
             let res = response["data"];
             for(let i=0; i < res.length; i++){
                 console.log(res[i].username);
-                createReview(res[i].review_id, res[i].username, res[i].description)
+                createReview(res[i].review_id, res[i].username, res[i].description);
+
+            }
+
+            //event listener to accept review
+            const accept_btns = document.getElementsByClassName("check");
+            for(let i=0; i < accept_btns.length; i++){
+                accept_btns[i].addEventListener("click", function(){
+                    acceptReview(this.id);
+                })
+            }
+
+            //event listener to decline review
+            const decline_btns = document.getElementsByClassName("cross");
+            for(let i=0; i < accept_btns.length; i++){
+                decline_btns[i].addEventListener("click", function(){
+                    declineReview(this.id);
+                })
             }
         });
     }
@@ -49,9 +66,22 @@ window.onload = function () {
         userdiv.appendChild(pic_name);
         userdiv.appendChild(review);
         userdiv.appendChild(icons);
-
         reviews_container.appendChild(userdiv);
     }
+
+    function acceptReview(review_id){
+        axios({
+            method: 'get',
+            url: 'http://localhost/Momato/Momato-Backend/APIs/accept_review.php?review_id='+review_id,
+        })
+        .then(function (response) {
+            if(response.data.success)
+                window.location.reload();
+            else
+                alert("An error occured.");
+        });
+    }
+
 
     getReviews();
 }
