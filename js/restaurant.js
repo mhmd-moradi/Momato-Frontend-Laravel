@@ -8,6 +8,7 @@ window.onload = function () {
     const send = document.getElementById("send-div"); 
     const review = document.getElementById("new-review"); 
     const restaurant_id = getRestaurantId();
+    const reviews_container = document.getElementById("reviews-container"); 
 
     function getRestaurant(){
         axios({
@@ -59,22 +60,45 @@ window.onload = function () {
     function getReviews(){
         axios({
             method: 'get',
-            url: 'http://localhost/Momato/Momato-Backend/APIs/get_reviews.php?restaurant_id='+restaurant_id,
+            url: 'http://localhost/Momato/Momato-Backend/APIs/get_approved_reviews.php?restaurant_id='+restaurant_id,
         })
         .then(function (response) {
             let res = response["data"];
             for(let i=0; i < res.length; i++){
-                console.log(res[i].status);
+                console.log(res[i].username);
+                createReview(res[i].username, res[i].description)
             }
         });
     }
 
-    function createReview(){
-        let rest = document.createElement('div');
-        rest.setAttribute("class", "user-div");
+    function createReview(usern, reviewtext){
+        let linebreak = document.createElement('hr');
+        reviews_container.appendChild(linebreak);
 
-        let pic_name = document.createElement('pic-name-container');
-        rest.setAttribute("class", "user-div");
+        let userdiv = document.createElement('div');
+        userdiv.setAttribute("class", "user-div");
+
+        let pic_name = document.createElement('div');
+        pic_name.setAttribute("class", "pic-name-conatiner");
+
+        let username = document.createElement('span');
+        username.setAttribute("id", "username");
+        username.setAttribute("class", "username");
+        username.innerHTML = usern;
+
+        let review_text = document.createElement('div');
+        review_text.setAttribute("class", "review-text");
+
+        let review = document.createElement('p');
+        review.setAttribute("class", "review");
+        pic_name.innerHTML = reviewtext;
+
+        review_text.appendChild(review);
+        pic_name.appendChild(username);
+        userdiv.appendChild(pic_name);
+        userdiv.appendChild(review_text);
+
+        reviews_container.appendChild(userdiv);
     }
 
     send.addEventListener("click", sendReview);
