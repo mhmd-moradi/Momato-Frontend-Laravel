@@ -95,7 +95,7 @@ window.onload = function () {
 
         let review = document.createElement('p');
         review.setAttribute("class", "review");
-        pic_name.innerHTML = reviewtext;
+        review.innerHTML = reviewtext;
 
         review_text.appendChild(review);
         pic_name.appendChild(username);

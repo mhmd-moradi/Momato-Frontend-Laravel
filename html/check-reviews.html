@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reviews</title>
-    <link rel="stylesheet" href="/css/check-reviews.css">
+    <link rel="stylesheet" href="../css/check-reviews.css">
     <script src="https://kit.fontawesome.com/d8969b722a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <section>
@@ -21,19 +22,20 @@
         <!-- Display Reviews -->
         <div>
             <h1>Reviews:</h1>
-            <div class="user-div">
-                <div class="pic-name">
-                    <img src="/assets/images/user4.jpg" alt="" class="user-profile" id="profile">
-                    <span class="username" id="username">User Name</span>
-                </div>
-                <p id="review">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                    Recusandae sunt fugit quae iste porro distinctio dolore explicabo enim ipsum 
-                    corporis hic fugiat aliquam animi,eos necessitatibus id maiores tempore ipsa!
-                </p>
-                <!-- Icons -->
-                <div class="icons">
-                    <i class="fa-solid fa-check check"></i>
-                    <i class="fa-solid fa-xmark cross"></i>
+            <div id="reviews-container">
+                <div class="user-div">
+                    <div class="pic-name">
+                        <span class="username" id="username">User Name</span>
+                    </div>
+                    <p id="review">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Recusandae sunt fugit quae iste porro distinctio dolore explicabo enim ipsum 
+                        corporis hic fugiat aliquam animi,eos necessitatibus id maiores tempore ipsa!
+                    </p>
+                    <!-- Icons -->
+                    <div class="icons">
+                        <i class="fa-solid fa-check check"></i>
+                        <i class="fa-solid fa-xmark cross"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -42,6 +44,6 @@
         </footer>
     </section>
     <!-- js -->
-    <script src="/js/check-reviews.js"></script>
+    <script src="../js/check-reviews.js"></script>
 </body>
 </html>
