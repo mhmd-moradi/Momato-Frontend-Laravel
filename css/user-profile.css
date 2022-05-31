@@ -10,7 +10,7 @@
     border-radius: 50%;
     border: 5px solid var(--yellow);
     width: 250px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     box-shadow: rgba(0, 0, 0, 0.29) 0px 3px 8px
 }
 
@@ -22,7 +22,7 @@
 }
 
 .txtbox{
-    margin: 15px 0 40px 0;
+    margin: 15px 0 35px 0;
     height: 50px;
     width: 550px;
     font-size: 1.05em;
@@ -50,7 +50,7 @@
     height: 43px;
     width: 150px;
     font-size: 1em;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.29) 0px 3px 8px;
     border-radius: 8px;
