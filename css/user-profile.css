@@ -75,3 +75,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         width: 240px;
     }
 }
+
+@media only screen and (max-width: 499px) {
+    #form{
+        width: 430px;
+        padding: 0 15px;
+    }
+    .txtbox{
+        width: 400px;
+    }
+    #profile-pic img{
+        width: 240px;
+    }
+}
