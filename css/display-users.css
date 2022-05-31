@@ -19,7 +19,6 @@ h1{
     /* box-shadow: rgba(245, 190, 38, 0.35) 0px 5px 15px; */
     border-radius: 20px;
     display: flex;
-    justify-content: center;
     padding: 1.5%;
     margin-bottom: 50px;
 }
@@ -30,10 +29,12 @@ h1{
     border-radius: 50%;
     border: 2px solid var(--yellow);
     margin: 0 auto;
+    
 }
 
 /* Image Div */
 .image{
+    margin: 0 auto;
     margin-right: 13%;
 }
 
@@ -41,17 +42,29 @@ h1{
 .info{
     font-size: 1.5em;
     color:#443b3b;
-    text-align: center;
     display: flex;
+    flex-direction: column;
     margin-top: 45px;
 }
-.user-div span{
-    float: left;
-    margin-left: 20%;
+.userDiv, .genderDiv, .emailDiv{
+    display: flex;
+    width: 435px;
+    margin-bottom: 10px;
 }
+.emaild, .userd, .genderd{
+    width: 270px;
+    word-wrap: break-word;
+}
+.emaill{
+    padding-right: 58px;
+}
+.genderl{
+    padding-right: 38px;
+}   
 .user-div label{
-    float: left;
     font-weight: bold;
+    width: 140px;
+    margin-right: 20px;
 }
 
 /* Media Query */
@@ -69,8 +82,66 @@ h1{
     }
     .info{
         margin: 15px auto;
+        padding-right: 0px;
     }
     h1{
         width: 450px;
     }
+    .userDiv, .genderDiv, .emailDiv{
+        width: 420px;
+    }
+    .emaild, .userd, .genderd{
+        width: 240px;
+        word-wrap: break-word;
+    } 
+    .user-div label{
+        margin-right: 10px;
+        padding-left: 30px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .user-div{
+        flex-direction: column;
+        width: 420px;
+        height: 330px;
+        margin-left: 15px;
+    }
+    .user-div span{
+        float: left;
+        margin-left: 5%;
+    }
+    .image{
+        height: 50%;
+        margin-right: 0%;
+        margin: 0 auto;
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+    .info{
+        margin: 15px 5px;
+    }
+    h1{
+        width: 450px;
+    }
+    .info{
+        font-size: 1.3em;
+    }
+    .userDiv, .genderDiv, .emailDiv{
+        width: 390px;
+    }
+    .emaild, .userd, .genderd{
+        width: 230px;
+        word-wrap: break-word;
+    } 
+    .user-div label{
+        width: 140px;
+        margin-right: 0px;
+    }
+    .emaill{
+        padding-right: 53px;
+    }
+    .genderl{
+        padding-right: 35px;
+    } 
 }

@@ -9,6 +9,7 @@ h1{
     font-size: 1.9em;
     font-weight: 400;
     color: #2a2222;
+    margin-top: 15px;
 }
 
 /* <--User Review Card--> */
@@ -142,6 +143,40 @@ h1{
     }
     .pic-name{
         float: none;
+    }
+    .user-profile{
+        margin: 0 auto;
+    }
+        
+}
+
+@media only screen and (max-width: 800px) {
+    h1{
+        width: 300px;
+        font-size: 1.7em;
+        margin-left: 25px;
+    }
+    .pic-name{
+        padding-bottom:0; 
+    }
+    .username{
+        padding-top: 12px;
+        padding-bottom: 5px;
+    }
+    .user-div{
+        width: 330px;
+        height: 280px;
+    }
+    .user-div p{
+        max-height: 110px;
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 10px;
+        padding-top: 0;
+    }
+    .pic-name{
+        float: none;
+        padding: 7px;
     }
     .user-profile{
         margin: 0 auto;

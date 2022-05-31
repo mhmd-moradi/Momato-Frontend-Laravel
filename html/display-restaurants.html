@@ -7,6 +7,7 @@
     <title>Restaurants</title>
     <link rel="stylesheet" href="../css/display-restaurants.css">
     <script src="https://kit.fontawesome.com/d8969b722a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -17,7 +18,7 @@
                 <span id="mo">mo</span><span id="ma">ma</span>to
             </div>
             <div id="home-icon">
-                <i class="fa-solid fa-house"></i>
+                <a href="user-profile.html"><i class="fa-solid fa-user"></i></a>
             </div>
         </div>
         <!-- Nav End --> 
@@ -32,251 +33,9 @@
 
             <!-- Category Start -->
             <div class="category">
-                <h1 class="category-title">Test Category</h1>
+                <!--<h1 class="category-title">Test Category</h1>-->
                 <!-- Category Restaurants Start -->
                 <div class="category-restaurants">
-                    <!-- Restaurant Start -->
-                    <div class="restaurant">
-                        <div class="restaurant-info">
-                            <img src="../assets/images/restaurant-1.jpg" alt="">
-                            <div class="name-rating">
-                                <h3 class="rest-name">KFC</h3>
-                                <div class="rating">
-                                    <p>4.3 <i class="fa fa-star" aria-hidden="true"></i></p>
-                                </div>
-                            </div>
-                            <h4 class="location">Hamra, Beirut</h4>
-                        </div>
-                    </div>
-                    <!-- Restaurant End -->
-
-                    <!-- Restaurant Start -->
-                    <div class="restaurant">
-                        <div class="restaurant-info">
-                            <img src="../assets/images/restaurant-1.jpg" alt="">
-                            <div class="name-rating">
-                                <h3 class="rest-name">KFC</h3>
-                                <div class="rating">
-                                    <p>4.3 <i class="fa fa-star" aria-hidden="true"></i></p>
-                                </div>
-                            </div>
-                            <h4 class="location">Hamra, Beirut</h4>
-                        </div>
-                    </div>
-                    <!-- Restaurant End -->
-
-                    <!-- Restaurant Start -->
-                    <div class="restaurant">
-                        <div class="restaurant-info">
-                            <img src="../assets/images/restaurant-1.jpg" alt="">
-                            <div class="name-rating">
-                                <h3 class="rest-name">KFC</h3>
-                                <div class="rating">
-                                    <p>4.3 <i class="fa fa-star" aria-hidden="true"></i></p>
-                                </div>
-                            </div>
-                            <h4 class="location">Hamra, Beirut</h4>
-                        </div>
-                    </div>
-                    <!-- Restaurant End -->
-
-                    <!-- Restaurant Start -->
-                    <div class="restaurant">
-                        <div class="restaurant-info">
-                            <img src="../assets/images/restaurant-1.jpg" alt="">
-                            <div class="name-rating">
-                                <h3 class="rest-name">KFC</h3>
-                                <div class="rating">
-                                    <p>4.3 <i class="fa fa-star" aria-hidden="true"></i></p>
-                                </div>
-                            </div>
-                            <h4 class="location">Hamra, Beirut</h4>
-                        </div>
-                    </div>
-                    <!-- Restaurant End -->
-
-                    <!-- Restaurant Start -->
-                    <div class="restaurant">
-                        <div class="restaurant-info">
-                            <img src="../assets/images/restaurant-1.jpg" alt="">
-                            <div class="name-rating">
-                                <h3 class="rest-name">KFC</h3>
-                                <div class="rating">
-                                    <p>4.3 <i class="fa fa-star" aria-hidden="true"></i></p>
-                                </div>
-                            </div>
-                            <h4 class="location">Hamra, Beirut</h4>
-                        </div>
-                    </div>
-                    <!-- Restaurant End -->
-                </div>
-                <!-- Category Restaurants End -->
-            </div>
-            <!-- Category End -->
-
-            <!-- Category Start -->
-            <div class="category">
-                <h1 class="category-title">Test Category</h1>
-                <!-- Category Restaurants Start -->
-                <div class="category-restaurants">
-                    <!-- Restaurant Start -->
-                    <div class="restaurant">
-                        <div class="restaurant-info">
-                            <img src="../assets/images/restaurant-1.jpg" alt="">
-                            <div class="name-rating">
-                                <h3 class="rest-name">KFC</h3>
-                                <div class="rating">
-                                    <p>4.3 <i class="fa fa-star" aria-hidden="true"></i></p>
-                                </div>
-                            </div>
-                            <h4 class="location">Hamra, Beirut</h4>
-                        </div>
-                    </div>
-                    <!-- Restaurant End -->
-
-                    <!-- Restaurant Start -->
-                    <div class="restaurant">
-                        <div class="restaurant-info">
-                            <img src="../assets/images/restaurant-1.jpg" alt="">
-                            <div class="name-rating">
-                                <h3 class="rest-name">KFC</h3>
-                                <div class="rating">
-                                    <p>4.3 <i class="fa fa-star" aria-hidden="true"></i></p>
-                                </div>
-                            </div>
-                            <h4 class="location">Hamra, Beirut</h4>
-                        </div>
-                    </div>
-                    <!-- Restaurant End -->
-
-                    <!-- Restaurant Start -->
-                    <div class="restaurant">
-                        <div class="restaurant-info">
-                            <img src="../assets/images/restaurant-1.jpg" alt="">
-                            <div class="name-rating">
-                                <h3 class="rest-name">KFC</h3>
-                                <div class="rating">
-                                    <p>4.3 <i class="fa fa-star" aria-hidden="true"></i></p>
-                                </div>
-                            </div>
-                            <h4 class="location">Hamra, Beirut</h4>
-                        </div>
-                    </div>
-                    <!-- Restaurant End -->
-
-                    <!-- Restaurant Start -->
-                    <div class="restaurant">
-                        <div class="restaurant-info">
-                            <img src="../assets/images/restaurant-1.jpg" alt="">
-                            <div class="name-rating">
-                                <h3 class="rest-name">KFC</h3>
-                                <div class="rating">
-                                    <p>4.3 <i class="fa fa-star" aria-hidden="true"></i></p>
-                                </div>
-                            </div>
-                            <h4 class="location">Hamra, Beirut</h4>
-                        </div>
-                    </div>
-                    <!-- Restaurant End -->
-
-                    <!-- Restaurant Start -->
-                    <div class="restaurant">
-                        <div class="restaurant-info">
-                            <img src="../assets/images/restaurant-1.jpg" alt="">
-                            <div class="name-rating">
-                                <h3 class="rest-name">KFC</h3>
-                                <div class="rating">
-                                    <p>4.3 <i class="fa fa-star" aria-hidden="true"></i></p>
-                                </div>
-                            </div>
-                            <h4 class="location">Hamra, Beirut</h4>
-                        </div>
-                    </div>
-                    <!-- Restaurant End -->
-                </div>
-                <!-- Category Restaurants End -->
-            </div>
-            <!-- Category End -->
-
-            <!-- Category Start -->
-            <div class="category">
-                <h1 class="category-title">Test Category</h1>
-                <!-- Category Restaurants Start -->
-                <div class="category-restaurants">
-                    <!-- Restaurant Start -->
-                    <div class="restaurant">
-                        <div class="restaurant-info">
-                            <img src="../assets/images/restaurant-1.jpg" alt="">
-                            <div class="name-rating">
-                                <h3 class="rest-name">KFC</h3>
-                                <div class="rating">
-                                    <p>4.3 <i class="fa fa-star" aria-hidden="true"></i></p>
-                                </div>
-                            </div>
-                            <h4 class="location">Hamra, Beirut</h4>
-                        </div>
-                    </div>
-                    <!-- Restaurant End -->
-
-                    <!-- Restaurant Start -->
-                    <div class="restaurant">
-                        <div class="restaurant-info">
-                            <img src="../assets/images/restaurant-1.jpg" alt="">
-                            <div class="name-rating">
-                                <h3 class="rest-name">KFC</h3>
-                                <div class="rating">
-                                    <p>4.3 <i class="fa fa-star" aria-hidden="true"></i></p>
-                                </div>
-                            </div>
-                            <h4 class="location">Hamra, Beirut</h4>
-                        </div>
-                    </div>
-                    <!-- Restaurant End -->
-
-                    <!-- Restaurant Start -->
-                    <div class="restaurant">
-                        <div class="restaurant-info">
-                            <img src="../assets/images/restaurant-1.jpg" alt="">
-                            <div class="name-rating">
-                                <h3 class="rest-name">KFC</h3>
-                                <div class="rating">
-                                    <p>4.3 <i class="fa fa-star" aria-hidden="true"></i></p>
-                                </div>
-                            </div>
-                            <h4 class="location">Hamra, Beirut</h4>
-                        </div>
-                    </div>
-                    <!-- Restaurant End -->
-
-                    <!-- Restaurant Start -->
-                    <div class="restaurant">
-                        <div class="restaurant-info">
-                            <img src="../assets/images/restaurant-1.jpg" alt="">
-                            <div class="name-rating">
-                                <h3 class="rest-name">KFC</h3>
-                                <div class="rating">
-                                    <p>4.3 <i class="fa fa-star" aria-hidden="true"></i></p>
-                                </div>
-                            </div>
-                            <h4 class="location">Hamra, Beirut</h4>
-                        </div>
-                    </div>
-                    <!-- Restaurant End -->
-
-                    <!-- Restaurant Start -->
-                    <div class="restaurant">
-                        <div class="restaurant-info">
-                            <img src="../assets/images/restaurant-1.jpg" alt="">
-                            <div class="name-rating">
-                                <h3 class="rest-name">KFC</h3>
-                                <div class="rating">
-                                    <p>4.3 <i class="fa fa-star" aria-hidden="true"></i></p>
-                                </div>
-                            </div>
-                            <h4 class="location">Hamra, Beirut</h4>
-                        </div>
-                    </div>
-                    <!-- Restaurant End -->
                 </div>
                 <!-- Category Restaurants End -->
             </div>
@@ -284,6 +43,7 @@
         </div>
         <!-- Restaurants Display End -->
     </section>
+    <script src="../js/display-restaurants.js"></script>
 </body>
 
 </html>

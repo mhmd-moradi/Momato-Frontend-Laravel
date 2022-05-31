@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Restaurant</title>
-    <link rel="stylesheet" href="/css/add-restaurant.css">
+    <link rel="stylesheet" href="../css/add-restaurant.css">
     <script src="https://kit.fontawesome.com/d8969b722a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
+
 <body>
     <section>
         <div id="header">
@@ -15,7 +18,7 @@
                 <span id="mo">mo</span><span id="ma">ma</span>to
             </div>
             <div id="home-icon">
-                <i class="fa-solid fa-house"></i>
+                <a href="../html/admin-page.html"><i class="fa-solid fa-house"></i></a>
             </div>
         </div>
         <div id="images">
@@ -23,83 +26,80 @@
         <!-- Form -->
         <div id="add-restaurant">
             <div id="form-div">
-                <form>
-                    <div id="image-div">
-                        <label for="inputTag" id="image-lbl">
-                        Select Image <br/>
+                <div id="image-div">
+                    <label for="inputTag" id="image-lbl">
+                        Select Image <br />
                         <i class="fa fa-2x fa-camera"></i>
-                        <input id="inputTag" type="file"/>
-                        <br/>
+                        <input id="inputTag" type="file" />
+                        <br />
                         <span id="imageName"></span>
-                        </label>
-                    </div>
-                    <br/>
-                    <label>Restaurant Name:</label>
-                    <br/>
-                    <input type="text" name="rname">
-                    <br/>
-                    <label>Location:</label>
-                    <br/>
-                    <input type="text" name="location">
-                    <br/>
-                    <label>Category:</label>
-                    <br/>
-                    <select name="category" id="">
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
+                    </label>
+                </div>
+                <br />
+                <label>Restaurant Name:</label>
+                <br />
+                <input id="name" type="text" name="rname">
+                <br />
+                <label>Location:</label>
+                <br />
+                <input id="location" type="text" name="location">
+                <br />
+                <label>Category:</label>
+                <br />
+                <select name="category" id="category">
+                    <option value="1">Vegan</option>
+                    <option value="2">Burger</option>
+                    <option value="3">Sushi</option>
+                </select>
+                <br>
+                <label>Description:</label>
+                <br />
+                <textarea name="description"></textarea>
+                <br />
+                <label>Opening Hours:</label>
+                <br>
+                <div id="hours">
+                    From:
+                    <select id="opening" name="from">
+                        <option value="1:00">1:00</option>
+                        <option value="2:00">2:00</option>
+                        <option value="3:00">3:00</option>
+                        <option value="4:00">4:00</option>
+                        <option value="5:00">5:00</option>
+                        <option value="6:00">6:00</option>
+                        <option value="7:00">7:00</option>
+                        <option value="8:00">8:00</option>
+                        <option value="9:00">9:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00">12:00</option>
                     </select>
-                    <br>
-                    <label>Description:</label>
-                    <br/>
-                    <textarea name="description"></textarea>
-                    <br/>
-                    <label>Opening Hours:</label>
-                    <br>
-                    <div id="hours">
-                        From: 
-                        <select id="from-selector" name="from">
-                            <option value="1:00">1:00</option>
-                            <option value="2:00">2:00</option>
-                            <option value="3:00">3:00</option>
-                            <option value="4:00">4:00</option>
-                            <option value="5:00">5:00</option>
-                            <option value="6:00">6:00</option>
-                            <option value="7:00">7:00</option>
-                            <option value="8:00">8:00</option>
-                            <option value="9:00">9:00</option>
-                            <option value="10:00">10:00</option>
-                            <option value="11:00">11:00</option>
-                            <option value="12:00">12:00</option>
-                        </select>
-                        <select name="am" class="am">
-                            <option value="am">AM</option>
-                            <option value="pm">PM</option>
-                        </select>
-                         <span id="till">Till: </span>
-                         <select name="till" id="till-selector">
-                            <option value="1:00">1:00</option>
-                            <option value="2:00">2:00</option>
-                            <option value="3:00">3:00</option>
-                            <option value="4:00">4:00</option>
-                            <option value="5:00">5:00</option>
-                            <option value="6:00">6:00</option>
-                            <option value="7:00">7:00</option>
-                            <option value="8:00">8:00</option>
-                            <option value="9:00">9:00</option>
-                            <option value="10:00">10:00</option>
-                            <option value="11:00">11:00</option>
-                            <option value="12:00">12:00</option>
-                         </select>
-                         <select name="am" class="am">
-                            <option value="am">AM</option>
-                            <option value="pm">PM</option>
-                        </select>
-                    </div>
-                    <br/>
-                    <button id="addBtn">Add Restaurant</button>
-            
-                </form>
+                    <select id="opening-daytime" name="am" class="am">
+                        <option value="am">AM</option>
+                        <option value="pm">PM</option>
+                    </select>
+                    <span id="till">Till: </span>
+                    <select name="till" id="closing">
+                        <option value="1:00">1:00</option>
+                        <option value="2:00">2:00</option>
+                        <option value="3:00">3:00</option>
+                        <option value="4:00">4:00</option>
+                        <option value="5:00">5:00</option>
+                        <option value="6:00">6:00</option>
+                        <option value="7:00">7:00</option>
+                        <option value="8:00">8:00</option>
+                        <option value="9:00">9:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00">12:00</option>
+                    </select>
+                    <select id="closing-daytime" name="am" class="am">
+                        <option value="am">AM</option>
+                        <option value="pm">PM</option>
+                    </select>
+                </div>
+                <br />
+                <button id="addBtn">Add Restaurant</button>
             </div>
         </div>
         <footer>
@@ -107,6 +107,7 @@
         </footer>
     </section>
     <!-- js -->
-    <script src="/js/add-restaurants.js"></script>
+    <script src="../js/add-restaurants.js"></script>
 </body>
+
 </html>

@@ -7,6 +7,7 @@
     <title>Restaurant</title>
     <link rel="stylesheet" href="../css/restaurant.css">
     <script src="https://kit.fontawesome.com/d8969b722a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <section>
@@ -39,7 +40,7 @@
                         <i class="fa-solid fa-location-dot"></i> <span id="location">Location</span><br>
                     </div>
                     <div id="duration-div">
-                        <i class="fa-solid fa-clock"></i> From: <span id="from"><b>1:00 pm</b></span> Till: <span is="till"><b>11:00 pm</b></span>
+                        <i class="fa-solid fa-clock"></i> From: <span id="from"><b>1:00 pm</b></span> Till: <span id="till"><b>11:00 pm</b></span>
                     </div>
                 </div>
 
@@ -67,7 +68,6 @@
                 <div id="reviews-container">
                     <div class="user-div">
                         <div class="pic-name-conatiner">
-                            <img src="/assets/images/user4.jpg" alt="" class="user-profile" id="profile">
                             <span class="username" id="username">User Name</span>
                         </div>
                         <div class="review-text">

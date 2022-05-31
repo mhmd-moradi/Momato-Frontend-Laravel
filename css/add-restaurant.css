@@ -112,12 +112,12 @@ select{
     border: none;
     padding: 10px;
 }
-#from-selector{
+#opening{
     width: 80px;
     height: 40px;
     margin-left: 10px;
 }
-#till-selector{
+#closing{
     width: 80px;
     height: 40px;
     margin-left: 10px;
@@ -161,4 +161,19 @@ footer{
     bottom: 5px;
     text-align: center;
     left: 40%;
+}
+
+@media only screen and (max-width: 555px) {
+    #form-div{
+        width: 400px;
+        padding: 15px;
+    }
+
+    input, textarea, select{
+        width: 370px;
+    }
+    #addBtn{
+        height: 45px;
+        width: 140px;
+    }
 }

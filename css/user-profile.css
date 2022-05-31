@@ -2,6 +2,7 @@
 
 /* Profile Picture */
 #profile-pic{
+    width: 100%;
     text-align: center;
 }
 
@@ -70,6 +71,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
     .txtbox{
         width: 425px;
+    }
+    #profile-pic img{
+        width: 240px;
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    #form{
+        width: 430px;
+        padding: 0 15px;
+    }
+    .txtbox{
+        width: 400px;
     }
     #profile-pic img{
         width: 240px;
