@@ -1,19 +1,5 @@
 window.onload = function () {
 
-    function getRestaurants(){
-        let data = new FormData();
-        axios({
-            method: 'get',
-            url: 'http://localhost/Zomato-Backend/APIs/get_restaurants.php',
-        })
-        .then(function (response) {
-            for(let i=0; i < response["data"].length; i++){
-                console.log(response["data"][i].image);
-                createRestaurant(response["data"][i].restaurant_id, response["data"][i].image, response["data"][i].restaurant_name, "4.3", response["data"][i].location);
-            }
-        });
-    }
-
     function createRestaurant(id, image, name, rate, loc){
         let rest = document.createElement('div');
         rest.setAttribute("id", id);
@@ -54,8 +40,6 @@ window.onload = function () {
         let category_restaurants = document.getElementsByClassName("category-restaurants")[0];
         category_restaurants.appendChild(rest);
     }
-
-    getRestaurants();
 
 
 }
