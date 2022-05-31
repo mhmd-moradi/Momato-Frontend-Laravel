@@ -13,6 +13,7 @@ window.onload = function () {
     const closing = document.getElementById("closing");
     const closing_daytime = document.getElementById("closing-daytime");
     const addBtn = document.getElementById("addBtn");
+    var result = document.getElementById("result");
     let base64String = "";
 
     addBtn.addEventListener("click", addRestaurant);
@@ -23,7 +24,7 @@ window.onload = function () {
         if (checkFields()){
             insertRestaurant();
         }else
-            alert("Please All Fields");      
+            result.innerText= "Please fill all feilds";   
     }
 
     function checkFields() {
@@ -64,10 +65,15 @@ window.onload = function () {
         .then(function (response) {
             let restaurant_id = response.data.restaurant_id;
             console.log(restaurant_id);
-            if(restaurant_id == -1)
-                alert("Couldn't Add Restaurant");
+            if(restaurant_id == -1){
+                result.innerText="Couldn't add restaurant!";
+            }
             else{
-                alert("Restaurant Added Successfully");
+                result.style.color="rgb(17, 149, 17)"
+                result.innerText="Restaurant Added Successfully!";
+                setTimeout(hideElement, 2000)
+                function hideElement() {
+                result.innerText=""}
                 window.location.reload();
             }
         });

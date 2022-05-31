@@ -53,6 +53,9 @@ section{
     margin-bottom: 30px;
 }
 
+#result{
+    color: #ee0b0b;
+}
 
 /* Form */
 #form-div{
