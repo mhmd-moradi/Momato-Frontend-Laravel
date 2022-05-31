@@ -1,7 +1,17 @@
-let signout = document.getElementById("signout");
+if(window.localStorage.getItem("id")==-1){
+    console.log("checked")
+    window.location.href = "../index.html";
+}
 
-signout.addEventListener("click",function(){
+window.onload = function () {
 
-    window.localStorage.clear()
-    window.localStorage.setItem("id",-1)
-})
+    
+
+    let signout = document.getElementById("signout");
+
+    signout.addEventListener("click",function(){
+
+        window.localStorage.clear()
+        window.localStorage.setItem("id",-1)
+    });
+}

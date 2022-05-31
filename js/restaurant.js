@@ -1,3 +1,7 @@
+if(window.localStorage.getItem("id")==-1){
+    console.log("checked")
+    window.location.href = "../index.html";
+}
 window.onload = function () {
 
     const res_pic = document.getElementById("res-pic");
