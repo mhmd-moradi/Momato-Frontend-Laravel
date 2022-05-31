@@ -105,7 +105,7 @@ h1{
         flex-direction: column;
         width: 420px;
         height: 330px;
-        margin-left: 15px;
+        margin: 0 auto;
     }
     .user-div span{
         float: left;
