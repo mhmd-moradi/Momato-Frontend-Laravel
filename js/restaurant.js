@@ -34,5 +34,26 @@ window.onload = function () {
         till.innerHTML = "<b>"+closing+"</b>";
     }
 
+    function sendReview(){
+        if(review.value != ""){
+            let data = new FormData();
+            data.append('user_id', localStorage.getItem("id"));
+            data.append('restaurant_id', restaurant_id);
+            data.append('description', review.value);
+            data.append('date', new Date().toISOString());
+            axios({
+                method: 'post',
+                url: 'http://localhost/Momato/Momato-Backend/APIs/add_review.php',
+                data: data,
+            })
+            .then(function (response) {
+                console.log(response.data.success);
+                if(response.data.success){
+                    alert("Review Sent! Waiting for approval...");
+                    review.value = "";
+                }
+            });
+        }
+    }
 
 }
