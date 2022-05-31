@@ -11,7 +11,11 @@
 h2{
    color: #f5be26;
     font-size: 2.7em;
-    margin-bottom: 50px; 
+    margin-bottom: 28px; 
+}
+
+#error{
+    color: #ee0b0b;
 }
 
 /* Sign in button */
