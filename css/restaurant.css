@@ -187,6 +187,20 @@ hr{
     font-family: "GT Eesti", Helvetica, Arial, sans-serif;
 }
 
+.message{
+    margin-top:20px;
+    margin-bottom: -20px;
+    display: none;
+}
+
+.success{
+    color: #579728;
+}
+
+.error{
+    color: red;
+}
+
 /* Send Icons */
 #send-div{
     margin: 0 auto;

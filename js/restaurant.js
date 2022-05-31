@@ -12,7 +12,9 @@ window.onload = function () {
     const send = document.getElementById("send-div"); 
     const review = document.getElementById("new-review"); 
     const restaurant_id = getRestaurantId();
-    const reviews_container = document.getElementById("reviews-container"); 
+    const reviews_container = document.getElementById("reviews-container");
+    const success = document.getElementsByClassName("success")[0];  
+    const error = document.getElementsByClassName("error")[0];  
 
     function getRestaurant(){
         axios({
@@ -53,10 +55,12 @@ window.onload = function () {
             })
             .then(function (response) {
                 console.log(response.data.success);
-                if(response.data.success){
-                    alert("Review Sent! Waiting for approval...");
-                    review.value = "";
-                }
+                if(response.data.success)
+                    success.style.display = "block";
+                else
+                    error.style.display = "block";
+                review.value = "";
+                setTimeout(function(){window.location.reload()}, 2000)
             });
         }
     }
