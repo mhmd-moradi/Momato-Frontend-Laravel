@@ -47,6 +47,7 @@
     border-radius: 20px;
     margin-left: 50px;
     scroll-snap-align: center;
+    cursor: pointer;
 }
 
 .restaurant:last-child{
