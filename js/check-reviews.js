@@ -22,6 +22,14 @@ window.onload = function () {
                     acceptReview(this.id);
                 })
             }
+
+            //event listener to decline review
+            const decline_btns = document.getElementsByClassName("cross");
+            for(let i=0; i < accept_btns.length; i++){
+                decline_btns[i].addEventListener("click", function(){
+                    declineReview(this.id);
+                })
+            }
         });
     }
 
