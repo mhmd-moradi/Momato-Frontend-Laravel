@@ -14,7 +14,10 @@
     box-shadow: rgba(0, 0, 0, 0.29) 0px 3px 8px
 }
 
-/* Profile Picture */
+/* Form */
+#textt{
+    color: rgb(17, 149, 17);
+}
 #form{
     width: 550px;
     margin: 0 auto;

@@ -14,10 +14,11 @@ window.onload = function () {
     const lname = document.getElementById("lname");
     const email = document.getElementById("email");
     const username = document.getElementById("username");
-    var error = document.getElementById("error");
+    var textt = document.getElementById("textt");
+    var user_id = window.localStorage.getItem("id");
 
     let data = new FormData();
-    data.append('user_id', window.localStorage.getItem("id"));
+    data.append('user_id', user_id);
     axios({
         method: 'post',
         url: 'http://localhost/Momato/Momato-Backend/APIs/get_users.php',
@@ -34,16 +35,26 @@ window.onload = function () {
     let button = document.getElementById("btn-edit");
     button.addEventListener("click", function(event){
         let data = new FormData();
-        data.append('email', email);
-        data.append('fname', fname);
-        data.append('lname', lname);
+        data.append('first_name', fname.value);
+        data.append('last_name', lname.value);
+        data.append('email', email.value);
+        data.append('user_id', user_id);
         axios({
             method: 'post',
-            url: 'http://localhost/Momato/Momato-Backend/APIs/add_user.php',
+            url: 'http://localhost/Momato/Momato-Backend/APIs/update_user.php',
             data: data,
         })
         .then(function (response) {
-            console.log(response.data.user_id);
+            console.log(response.data.success);
+            if (response.data.success){
+                textt.innerText="Updated!";
+                setTimeout(hideElement, 2000)
+                function hideElement() {
+                    textt.innerText=""}
+            }
+            else{
+                console.log("failed");
+            }
         });
     });
 }
