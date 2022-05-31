@@ -25,81 +25,82 @@
         </div>
         <!-- Form -->
         <div id="add-restaurant">
-            <div id="form-div">
-                <div id="image-div">
-                    <label for="inputTag" id="image-lbl">
-                        Select Image <br />
-                        <i class="fa fa-2x fa-camera"></i>
-                        <input id="inputTag" type="file" />
-                        <br />
-                        <span id="imageName"></span>
-                    </label>
+            <div id="box">
+                <div id="form-div">
+                    <div id="image-div">
+                        <label for="inputTag" id="image-lbl">
+                            
+                            <i class="fa fa-2x fa-camera"></i>
+                            <br>Select Image
+                            <input id="inputTag" type="file" />
+                        </label>
+                    </div>
+                    <br />
+                    <label>Restaurant Name:</label>
+                    <br />
+                    <input id="name" type="text" name="rname">
+                    <br />
+                    <label>Location:</label>
+                    <br />
+                    <input id="location" type="text" name="location">
+                    <br />
+                    <label>Category:</label>
+                    <br />
+                    <select name="category" id="category">
+                        <option value="1">Vegan</option>
+                        <option value="2">Burger</option>
+                        <option value="3">Sushi</option>
+                    </select>
+                    <br>
+                    <label>Description:</label>
+                    <br />
+                    <textarea name="description"></textarea>
+                    <br />
+                    <label>Opening Hours:</label>
+                    <br>
+                    <div id="hours">
+                        From:
+                        <select id="opening" name="from">
+                            <option value="1:00">1:00</option>
+                            <option value="2:00">2:00</option>
+                            <option value="3:00">3:00</option>
+                            <option value="4:00">4:00</option>
+                            <option value="5:00">5:00</option>
+                            <option value="6:00">6:00</option>
+                            <option value="7:00">7:00</option>
+                            <option value="8:00">8:00</option>
+                            <option value="9:00">9:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                        </select>
+                        <select id="opening-daytime" name="am" class="am">
+                            <option value="am">AM</option>
+                            <option value="pm">PM</option>
+                        </select>
+                        <span id="till">Till: </span>
+                        <select name="till" id="closing">
+                            <option value="1:00">1:00</option>
+                            <option value="2:00">2:00</option>
+                            <option value="3:00">3:00</option>
+                            <option value="4:00">4:00</option>
+                            <option value="5:00">5:00</option>
+                            <option value="6:00">6:00</option>
+                            <option value="7:00">7:00</option>
+                            <option value="8:00">8:00</option>
+                            <option value="9:00">9:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                        </select>
+                        <select id="closing-daytime" name="am" class="am">
+                            <option value="am">AM</option>
+                            <option value="pm">PM</option>
+                        </select>
+                    </div>
+                    <br />
+                    <button id="addBtn">Add Restaurant</button>
                 </div>
-                <br />
-                <label>Restaurant Name:</label>
-                <br />
-                <input id="name" type="text" name="rname">
-                <br />
-                <label>Location:</label>
-                <br />
-                <input id="location" type="text" name="location">
-                <br />
-                <label>Category:</label>
-                <br />
-                <select name="category" id="category">
-                    <option value="1">Vegan</option>
-                    <option value="2">Burger</option>
-                    <option value="3">Sushi</option>
-                </select>
-                <br>
-                <label>Description:</label>
-                <br />
-                <textarea name="description"></textarea>
-                <br />
-                <label>Opening Hours:</label>
-                <br>
-                <div id="hours">
-                    From:
-                    <select id="opening" name="from">
-                        <option value="1:00">1:00</option>
-                        <option value="2:00">2:00</option>
-                        <option value="3:00">3:00</option>
-                        <option value="4:00">4:00</option>
-                        <option value="5:00">5:00</option>
-                        <option value="6:00">6:00</option>
-                        <option value="7:00">7:00</option>
-                        <option value="8:00">8:00</option>
-                        <option value="9:00">9:00</option>
-                        <option value="10:00">10:00</option>
-                        <option value="11:00">11:00</option>
-                        <option value="12:00">12:00</option>
-                    </select>
-                    <select id="opening-daytime" name="am" class="am">
-                        <option value="am">AM</option>
-                        <option value="pm">PM</option>
-                    </select>
-                    <span id="till">Till: </span>
-                    <select name="till" id="closing">
-                        <option value="1:00">1:00</option>
-                        <option value="2:00">2:00</option>
-                        <option value="3:00">3:00</option>
-                        <option value="4:00">4:00</option>
-                        <option value="5:00">5:00</option>
-                        <option value="6:00">6:00</option>
-                        <option value="7:00">7:00</option>
-                        <option value="8:00">8:00</option>
-                        <option value="9:00">9:00</option>
-                        <option value="10:00">10:00</option>
-                        <option value="11:00">11:00</option>
-                        <option value="12:00">12:00</option>
-                    </select>
-                    <select id="closing-daytime" name="am" class="am">
-                        <option value="am">AM</option>
-                        <option value="pm">PM</option>
-                    </select>
-                </div>
-                <br />
-                <button id="addBtn">Add Restaurant</button>
             </div>
         </div>
         <footer>

@@ -61,39 +61,61 @@ section{
     margin-bottom: 40px;
     text-align: center;
 }
+#box{
+    width: 700px;
+    margin: 0 auto;
+    padding-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+    border: 3px solid var(--yellow);
+    border-radius: 20px;  
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 8px;
+    background-color: white;
+}
 
 /* Upload Image */
 #image-div{
     text-align:center;
-    padding:4%;
-    box-shadow: rgba(0, 0, 0, 0.29) 0px 3px 8px;
-    border-radius: 8px;
-    height: 80px;
+    padding: 4% 2.5%;
+    height: 90px;
     width: 150px;
     display: block;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
   }
 
-#inputTag{
-    display: none;
+#file-upload-button{
+    background-color: white;
+    border: none;
 }
+
+
 #image-lbl{
     cursor:pointer;
+    width: 120px;
+    margin: 0 auto;
+    position:relative;
+}
+
+#inputTag{
+    width: 300px;
+    margin: 0 auto;
+    position: absolute;
+    top:150%;
+    right:-75%;
 }
 
 /* Labels,Input, Textarea, Selectors */
 label{
-    font-weight: bold;
-    font-size: 1.05em;
+    font-size: 1.1em;
     float: left;
 }
 input, textarea{
-    margin: 25px 0 40px 0;
+    margin: 25px 0 25px 0;
     height: 50px;
     width: 500px;
     font-size: 1.05em;
-    box-shadow: rgba(0, 0, 0, 0.29) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;
     border-radius: 8px;
     border: none;
     padding: 10px;
@@ -103,12 +125,12 @@ textarea{
     resize: none;
 }
 select{
-    margin: 25px 0 40px 0;
+    margin: 25px 0 25px 0;
     height: 50px;
     width: 500px;
     font-size: 1.05em;
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.29) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;
     border: none;
     padding: 10px;
 }
@@ -150,7 +172,7 @@ select{
     margin: 0 auto;
     margin-top: 15px;
     border: none;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;
 }
 
 /* Footer */
@@ -163,17 +185,37 @@ footer{
     left: 40%;
 }
 
+@media only screen and (max-width:800px){
+    #box{
+        width: 520px;
+    }
+}
+
 @media only screen and (max-width: 555px) {
     #form-div{
         width: 400px;
         padding: 15px;
     }
-
+    #box{
+        width: 450px;
+    }
     input, textarea, select{
         width: 370px;
     }
     #addBtn{
         height: 45px;
         width: 140px;
+    }
+}
+
+@media only screen and (max-width:400px){
+    #form-div{
+        width: 360px;
+    }
+    input, textarea, select{
+        width: 330px;
+    }
+    #box{
+        width: 370px;
     }
 }
