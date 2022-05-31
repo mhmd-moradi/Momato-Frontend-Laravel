@@ -81,7 +81,26 @@ window.onload = function () {
         emailtext.setAttribute("class", "Email");
         emailtext.setAttribute("id", "email");
         emailtext.innerHTML = email;
+        
+        userdiv.appendChild(label_username);
+        userd.appendChild(usernametext);
+        userdiv.appendChild(userd);
+        info.appendChild(userdiv);
 
+        genderdiv.appendChild(label_gender);
+        genderd.appendChild(gendertext);
+        genderdiv.appendChild(genderd);
+        info.appendChild(genderdiv);
+
+        emaildiv.appendChild(label_email);
+        emaild.appendChild(emailtext);
+        emaildiv.appendChild(emaild);
+        info.appendChild(emaildiv);
+
+        imagediv.appendChild(image);
+        userdivmain.appendChild(imagediv);
+        userdivmain.appendChild(info);
+        users_container.appendChild(userdivmain);
     }
 
     getUsers();
