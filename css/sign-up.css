@@ -191,14 +191,14 @@ h2{
         display: none;
     }
     #topleft{
-        width: 50px;
+        width: 40px;
         height: 150px;
         border-radius: 0 150px 150px 0;
         -moz-border-radius: 0 150px 150px 0;
         -webkit-border-radius: 0 150px 150px 0;
     }
     #circle-right{
-        width: 50px;
+        width: 40px;
         height: 150px;
         background: #efc142;
         border-radius: 150px 0 0 150px;
@@ -220,5 +220,30 @@ h2{
     }
     .txtbox{
         width: 400px;
+    }
+}
+
+@media only screen and (max-width: 475px) {
+    #topleft{
+        width: 30px;
+        height: 150px;
+        border-radius: 0 150px 150px 0;
+        -moz-border-radius: 0 150px 150px 0;
+        -webkit-border-radius: 0 150px 150px 0;
+    }
+    #circle-right{
+        width: 30px;
+        height: 150px;
+        background: #efc142;
+        border-radius: 150px 0 0 150px;
+        -moz-border-radius: 150px 0 0 150px;
+        -webkit-border-radius: 150px 0 0 150px;
+        border: none;
+    }
+    h1{ 
+        font-size: 4.8em;
+    }
+    .txtbox{
+        width: 350px;
     }
 }
