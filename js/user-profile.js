@@ -30,5 +30,21 @@ window.onload = function () {
         username.setAttribute("value",response.data[0].username);
         }
     );
+
+    let button = document.getElementById("btn-edit");
+    button.addEventListener("click", function(event){
+        let data = new FormData();
+        data.append('email', email);
+        data.append('fname', fname);
+        data.append('lname', lname);
+        axios({
+            method: 'post',
+            url: 'http://localhost/Momato/Momato-Backend/APIs/add_user.php',
+            data: data,
+        })
+        .then(function (response) {
+            console.log(response.data.user_id);
+        });
+    });
 }
 
