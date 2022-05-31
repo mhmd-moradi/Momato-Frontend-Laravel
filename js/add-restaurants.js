@@ -53,7 +53,7 @@ window.onload = function () {
         data.append('user', 3);
         axios({
             method: 'post',
-            url: 'http://localhost/Zomato-Backend/APIs/add_Restaurant.php',
+            url: 'http://localhost/Momato-Backend/APIs/add_Restaurant.php',
             data: data,
         })
         .then(function (response) {
