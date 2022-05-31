@@ -4,7 +4,7 @@ window.onload = function () {
         let data = new FormData();
         axios({
             method: 'get',
-            url: 'http://localhost/Zomato-Backend/APIs/get_restaurants.php',
+            url: 'http://localhost/Momato/Momato-Backend/APIs/get_restaurants.php',
         })
         .then(function (response) {
             for(let i=0; i < response["data"].length; i++){
