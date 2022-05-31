@@ -18,7 +18,8 @@ window.onload = function () {
     function addRestaurant() {
         if (checkFields()){
             insertRestaurant();
-        }      
+        }else
+            alert("Please All Fields");      
     }
 
     function checkFields() {
@@ -50,15 +51,21 @@ window.onload = function () {
         data.append('category', category.value);
         data.append('opening_time', opening.value + " " + opening_daytime.value);
         data.append('closing_time', closing.value + " " + closing_daytime.value);
-        data.append('user', 3);
+        data.append('user', localStorage.getItem("id"));
         axios({
             method: 'post',
-            url: 'http://localhost/Momato-Backend/APIs/add_Restaurant.php',
+            url: 'http://localhost/Momato/Momato-Backend/APIs/add_restaurant.php',
             data: data,
         })
         .then(function (response) {
-            console.log(response["data"]["success"]);
+            let restaurant_id = response.data.restaurant_id;
+            console.log(restaurant_id);
+            if(restaurant_id == -1)
+                alert("Couldn't Add Restaurant");
+            else{
+                alert("Restaurant Added Successfully");
+                window.location.reload();
             }
-        );
+        });
     }
 }
