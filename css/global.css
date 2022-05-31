@@ -24,7 +24,7 @@ section{
 }
 
 #header{
-    margin: 18px 0 30px 45px;
+    margin: 20px 0 20px 45px;
 }
 
 /* Logo */
@@ -60,4 +60,16 @@ footer{
     text-align: center;
     right: 0;
     left: 0;
+}
+
+@media only screen and (max-width: 499px){
+    #header{
+        margin: 20px 0 20px 10px;
+    }
+    #home-icon{
+        float: right;
+        margin-right: 10px;
+        color: var(--darker-yellow);
+        font-size: 2em;
+    }
 }

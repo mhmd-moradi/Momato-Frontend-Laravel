@@ -162,3 +162,18 @@ footer{
     text-align: center;
     left: 40%;
 }
+
+@media only screen and (max-width: 555px) {
+    #form-div{
+        width: 400px;
+        padding: 15px;
+    }
+
+    input, textarea, select{
+        width: 370px;
+    }
+    #addBtn{
+        height: 45px;
+        width: 140px;
+    }
+}
