@@ -82,6 +82,18 @@ window.onload = function () {
         });
     }
 
+    function declineReview(review_id){
+        axios({
+            method: 'get',
+            url: 'http://localhost/Momato/Momato-Backend/APIs/decline_review.php?review_id='+review_id,
+        })
+        .then(function (response) {
+            if(response.data.success)
+                window.location.reload();
+            else
+                alert("An error occured.");
+        });
+    }
 
     getReviews();
 }
