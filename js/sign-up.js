@@ -10,32 +10,41 @@ window.onload = function () {
     const c_password = document.getElementById("c_pass").value;
     const username= document.getElementById("username").value;
     const gender = document.querySelector('input[name="gender"]:checked').value;
-    
-    if( password!== c_password){
-        alert("Passwords don't match");
-    }
+    const genders = document.getElementsByClassName("radio");
+    var error = document.getElementById("error");
 
-    let data = new FormData();
-    data.append('username', username);
-    data.append('password', password);
-    data.append('email', email);
-    data.append('fname', fname);
-    data.append('lname', lname);
-    data.append('gender', gender);
-    axios({
-        method: 'post',
-        url: 'http://localhost/Momato/Momato-Backend/APIs/add_user.php',
-        data: data,
-    })
-    .then(function (response) {
-        console.log(response.data.user_id);
-        if(response.data.user_id == -1){
-            alert("Sign up failed!");
-        }else{
-            window.localStorage.setItem("id",response.data.user_id);
-            window.location.href = "display-restaurants.html";
-        }
-        }
-    );
+    //Fields empty
+    if(fname==""||lname==""||email==""||password==""||c_password==""||username==""){
+        error.innerText="Please fill all fields";
+    }
+    //Passwords don't match
+    else if( password!== c_password){
+        error.innerText="Passwords don't match";
+    }
+    else{
+
+        let data = new FormData();
+        data.append('username', username);
+        data.append('password', password);
+        data.append('email', email);
+        data.append('fname', fname);
+        data.append('lname', lname);
+        data.append('gender', gender);
+        axios({
+            method: 'post',
+            url: 'http://localhost/Momato/Momato-Backend/APIs/add_user.php',
+            data: data,
+        })
+        .then(function (response) {
+            console.log(response.data.user_id);
+            if(response.data.user_id == -1){
+                alert("Sign up failed!");
+            }else{
+                window.localStorage.setItem("id",response.data.user_id);
+                window.location.href = "display-restaurants.html";
+            }
+            }
+        );
+    }
 });
 }
