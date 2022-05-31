@@ -40,13 +40,6 @@
     right: 15px;
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
-    display: block;
-    width: 100px;
-    height: 100px;
-    background: url("../assets/images/white.png"); 
-}
-
 .radio{
     margin: 20px 40px 40px 7px;
 }

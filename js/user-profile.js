@@ -9,4 +9,8 @@ window.onload = function () {
         window.localStorage.clear()
         window.localStorage.setItem("id",-1)
     });
+
+    
+
+
 }

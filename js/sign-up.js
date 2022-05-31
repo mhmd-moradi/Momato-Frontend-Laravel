@@ -10,7 +10,6 @@ window.onload = function () {
     const c_password = document.getElementById("c_pass").value;
     const username= document.getElementById("username").value;
     const gender = document.querySelector('input[name="gender"]:checked').value;
-    const genders = document.getElementsByClassName("radio");
     var error = document.getElementById("error");
 
     //Fields empty
