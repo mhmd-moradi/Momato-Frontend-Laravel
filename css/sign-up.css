@@ -71,6 +71,10 @@ h2{
     color: black;
 }
 
+#error{
+    color: #ee0b0b;
+}
+
 .txtbox{
     margin: 10px 0 25px;
     height: 55px;
