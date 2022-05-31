@@ -64,7 +64,7 @@ section{
 #box{
     width: 700px;
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 20px;
     margin-bottom: 50px;
     text-align: center;
     border: 3px solid var(--yellow);
@@ -111,7 +111,7 @@ label{
     float: left;
 }
 input, textarea{
-    margin: 25px 0 40px 0;
+    margin: 25px 0 25px 0;
     height: 50px;
     width: 500px;
     font-size: 1.05em;
@@ -125,7 +125,7 @@ textarea{
     resize: none;
 }
 select{
-    margin: 25px 0 40px 0;
+    margin: 25px 0 25px 0;
     height: 50px;
     width: 500px;
     font-size: 1.05em;
