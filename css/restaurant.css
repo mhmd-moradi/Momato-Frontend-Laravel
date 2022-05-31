@@ -1,0 +1,214 @@
+@import url(global.css);
+
+#res-pic-div{
+    height: 350px;
+    width: 65%;
+    margin: 0 auto;
+}
+
+#res-pic{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* Restaurant Details Start */
+#res-details{
+    width: 64%;
+    margin: 30px auto;
+    display: flex;
+    font-size: 1.1em;
+}
+
+#left{
+    width: 50%;
+}
+
+#right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#duration-div{
+    margin-top: 20px;
+    
+}
+
+#left i{
+    margin-right: 5px;
+    color: var(--green);
+}
+
+/* Ratings */
+.rating{
+    width: 50px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #579728;
+    display: flex;
+    margin-left: auto;
+}
+
+.rating p{
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 15px;
+    margin: 5px auto;
+}
+
+#stars{
+    margin-top: 10px;
+    margin-left: auto;
+}
+
+.checked{
+    color: #efb71d;
+}
+/* Restaurant Details End */
+
+/* Restaurant Review Start*/
+#reviews-div{
+    height: 350px;
+    width: 65%;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 100px;
+}
+#reviews-container{
+    overflow-y:auto;
+    height: 290px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#review-p{
+    padding: 15px 0 10px 30px;
+    font-size: 1.3em;
+}
+
+/* Photo and username */
+.user-div{
+    margin: 0 auto;
+    width: 1200px;
+    height: 120px;
+    position: relative;
+    display: flex;
+}
+
+.pic-name-conatiner{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    padding: 15px 10px 5px 20px;
+}
+
+.user-profile{
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    border: 2px solid var(--yellow);
+    margin: 0 auto;
+}
+
+.username{
+    font-size: 1em;
+    color:#443b3b;
+    text-align: center;
+    padding-top: 7px;
+}
+
+.review-text{
+    width: 88%;
+    max-height: 75%;
+}
+
+.user-div p{
+    padding: 20px 0px 0px 10px;
+    width: 100%;
+    color:#2a2222;
+    overflow-y:auto;
+    text-align: justify;
+    font-size: 1.1em;
+    line-height: 1.7em;
+}
+hr{
+    margin: 0 30px;
+}
+/* Restaurant Review End*/
+
+/* Add Review Start */
+#container{
+    width: 65%;
+    margin: 0 auto;
+}
+
+#add-review-container{
+    height: 75px;
+    width: 100%;
+    margin: 50px 0;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+}
+
+#current-user{
+    width: 70px;
+}
+
+#current-profile{
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    border: 2px solid var(--yellow);
+    margin: 10px;
+    margin-left: 15px;
+}
+
+/* Add review textbox */
+#new-review-div{
+    width: 85%;
+}
+
+#new-review{
+    margin: 10px;
+    width: 100%;
+    height: 70%;
+    font-size: 1.2em;
+    line-height: 1.05em;
+    resize: none;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 20px;
+    overflow:hidden;
+    font-family: "GT Eesti", Helvetica, Arial, sans-serif;
+}
+
+/* Send Icons */
+#send-div{
+    margin: 0 auto;
+    width: 70px;
+}
+
+#send{
+    font-size: 1.8em;
+    margin-left: 20px;
+    margin-top: 25px;
+    color: var(--yellow);
+}
+/* Add Review End */
+
+/* Media Query */
+@media only screen and (max-width: 1300px) {
+    #res-pic-div{
+        height: 300px;
+    }
+}
+@media only screen and (max-width: 850px) {
+    #res-pic-div{
+        height: 250px;
+    }
+}
