@@ -13,8 +13,7 @@ window.onload = function () {
     const fname = document.getElementById("fname");
     const lname = document.getElementById("lname");
     const email = document.getElementById("email");
-    const password = document.getElementById("pass");
-    const gender = document.querySelector('input[name="gender"]:checked');
+    const username = document.getElementById("username");
     var error = document.getElementById("error");
 
     let data = new FormData();
@@ -25,8 +24,10 @@ window.onload = function () {
         data: data,
     })
     .then(function (response) {
-        console.log(response.data)
-        fname.
+        fname.setAttribute("value",response.data[0].first_name);
+        lname.setAttribute("value",response.data[0].last_name);
+        email.setAttribute("value",response.data[0].email);
+        username.setAttribute("value",response.data[0].username);
         }
     );
 }
