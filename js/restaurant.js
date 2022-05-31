@@ -69,4 +69,15 @@ window.onload = function () {
         });
     }
 
+    function createReview(){
+        let rest = document.createElement('div');
+        rest.setAttribute("class", "user-div");
+
+        let pic_name = document.createElement('pic-name-container');
+        rest.setAttribute("class", "user-div");
+    }
+
+    send.addEventListener("click", sendReview);
+    getRestaurant();
+    getReviews();
 }
