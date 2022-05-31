@@ -10,10 +10,9 @@ window.onload = function () {
     const c_password = document.getElementById("c_pass").value;
     const username= document.getElementById("username").value;
     const gender = document.querySelector('input[name="gender"]:checked').value;
-    const genders = document.getElementsByClassName("radio");
     var error = document.getElementById("error");
 
-    //Fields empty
+    //Empty fields
     if(fname==""||lname==""||email==""||password==""||c_password==""||username==""){
         error.innerText="Please fill all fields";
     }
@@ -22,7 +21,6 @@ window.onload = function () {
         error.innerText="Passwords don't match";
     }
     else{
-
         let data = new FormData();
         data.append('username', username);
         data.append('password', password);
