@@ -26,4 +26,13 @@ window.onload = function () {
         return url.searchParams.get("restaurant_id");
     }
 
+    function updateRestaurantInfo(image, name, location, opening, closing){
+        res_pic.src = "data:image/png;base64,"+image;
+        res_name.innerHTML = name;
+        res_location.innerHTML = location;
+        from.innerHTML = "<b>"+opening+"</b>";
+        till.innerHTML = "<b>"+closing+"</b>";
+    }
+
+
 }
