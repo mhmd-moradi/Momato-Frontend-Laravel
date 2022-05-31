@@ -10,7 +10,12 @@ window.onload = function () {
         window.localStorage.setItem("id",-1)
     });
 
+    const fname = document.getElementById("fname").value;
+    const lname = document.getElementById("lname").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("pass").value;
+    const gender = document.querySelector('input[name="gender"]:checked').value;
+    var error = document.getElementById("error");
+
     
-
-
 }
