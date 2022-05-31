@@ -19,4 +19,11 @@ window.onload = function () {
             updateRestaurantInfo(res.image, res.restaurant_name, res.location, res.opening_time, res.closing_time);
         });
     }
+
+    function getRestaurantId(){
+        var url_string = window.location.href;
+        var url = new URL(url_string);
+        return url.searchParams.get("restaurant_id");
+    }
+
 }
