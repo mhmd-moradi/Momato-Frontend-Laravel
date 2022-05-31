@@ -61,6 +61,17 @@ section{
     margin-bottom: 40px;
     text-align: center;
 }
+#box{
+    width: 700px;
+    margin: 0 auto;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    border: 3px solid var(--yellow);
+    border-radius: 20px;  
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 8px;
+    background-color: white;
+}
 
 /* Upload Image */
 #image-div{
@@ -175,12 +186,18 @@ footer{
 }
 
 @media only screen and (max-width:800px){
+    #box{
+        width: 520px;
+    }
 }
 
 @media only screen and (max-width: 555px) {
     #form-div{
         width: 400px;
         padding: 15px;
+    }
+    #box{
+        width: 450px;
     }
     input, textarea, select{
         width: 370px;
@@ -197,5 +214,8 @@ footer{
     }
     input, textarea, select{
         width: 330px;
+    }
+    #box{
+        width: 370px;
     }
 }
