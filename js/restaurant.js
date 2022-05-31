@@ -56,4 +56,17 @@ window.onload = function () {
         }
     }
 
+    function getReviews(){
+        axios({
+            method: 'get',
+            url: 'http://localhost/Momato/Momato-Backend/APIs/get_reviews.php?restaurant_id='+restaurant_id,
+        })
+        .then(function (response) {
+            let res = response["data"];
+            for(let i=0; i < res.length; i++){
+                console.log(res[i].status);
+            }
+        });
+    }
+
 }
