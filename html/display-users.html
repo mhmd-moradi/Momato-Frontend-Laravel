@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Users</title>
-    <link rel="stylesheet" href="/css/display-users.css">
+    <link rel="stylesheet" href="../css/display-users.css">
     <script src="https://kit.fontawesome.com/d8969b722a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <section>
@@ -22,38 +23,39 @@
         <!-- Display Users -->
         <div>
             <h1>Users:</h1>
-            <div class="user-div">
-                <div class="image">
-                    <img src="/assets/images/user4.jpg" alt="" class="user-profile" id="profile">
-                </div>
-                <div class="info">
-                    
-                    <div class="userDiv">
-                        <div><label>User name:</label></div>
-                        <div class="userd"><span class="username" id="username">Stacey Jones</span></div>
+            <div id="users-container">
+                <div class="user-div">
+                    <div class="image">
+                        <img src="../assets/images/user4.jpg" alt="" class="user-profile" id="profile">
                     </div>
-                    <div class="genderDiv">
-                        <div><label class="genderl">Gender:</label></div>
-                        <div class="genderd"><span class="Gender" id="gender">Female</span></div>
+                    <div class="info">
+                        <div class="userDiv">
+                            <label>User name:</label>
+                            <div class="userd"><span class="username" id="username">Stacey Jones</span></div>
+                        </div>
+                        <div class="genderDiv">
+                            <label class="genderl">Gender:</label>
+                            <div class="genderd"><span class="Gender" id="gender">Female</span></div>
+                        </div>
+                        <div class="emailDiv">
+                            <label class="emaill">Email:</label>
+                            <div class="emaild"><span class="Email" id="email">Email@gmail.comnjdsflnwel</span></div>
+                        </div>
+                        <!-- <div>
+                            <label>User name:</label>
+                            <br>
+                            <label>Gender:</label>
+                            <br>
+                            <label>Email:</label>
+                        </div>
+                        <div id="right-info">
+                            <span class="username" id="username">Stacey Jones</span>
+                            <br>
+                            <span class="Gender" id="gender">Female</span>
+                            <br>
+                            <span class="Email" id="email">Email@gmail.comnjdsfnejknfljenflnwel</span>
+                        </div> -->
                     </div>
-                    <div class="emailDiv">
-                        <div><label class="emaill">Email:</label></div>
-                        <div class="emaild"><span class="Email" id="email">Email@gmail.comnjdsflnwel</span></div>
-                    </div>
-                    <!-- <div>
-                        <label>User name:</label>
-                        <br>
-                        <label>Gender:</label>
-                        <br>
-                        <label>Email:</label>
-                    </div>
-                    <div id="right-info">
-                        <span class="username" id="username">Stacey Jones</span>
-                        <br>
-                        <span class="Gender" id="gender">Female</span>
-                        <br>
-                        <span class="Email" id="email">Email@gmail.comnjdsfnejknfljenflnwel</span>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -63,6 +65,6 @@
         </footer>
     </section>
     <!-- js -->
-    <script src="/js/display-users.js"></script>
+    <script src="../js/display-users.js"></script>
 </body>
 </html>
