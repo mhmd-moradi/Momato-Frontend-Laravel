@@ -21,28 +21,41 @@ window.onload = function () {
         error.innerText="Passwords don't match";
     }
     else{
-        let data = new FormData();
-        data.append('username', username);
-        data.append('password', password);
-        data.append('email', email);
-        data.append('fname', fname);
-        data.append('lname', lname);
-        data.append('gender', gender);
-        axios({
+        let url = 'http://localhost:8000/api/add_user';
+        fetch(url, {
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json, text-plain, */*",
+                },
             method: 'post',
-            url: 'http://localhost/Momato/Momato-Backend/APIs/add_user.php',
-            data: data,
+            credentials: "same-origin",
+            body: JSON.stringify({
+                username: username,
+                password: password,
+                email: email,
+                first_name: fname,
+                last_name: lname,
+                gender: gender,
+            })
         })
-        .then(function (response) {
-            console.log(response.data.user_id);
-            if(response.data.user_id == -1){
+        .then(response => 
+            response.json().then(data => ({
+                data: data,
+                status: response.status
+            })
+        )).then(res => {
+            console.log(res.data);
+            if(res.data.user_id <= 0){
                 alert("Sign up failed!");
             }else{
-                window.localStorage.setItem("id",response.data.user_id);
+                window.localStorage.setItem("id",res.data.user_id);
                 window.location.href = "display-restaurants.html";
             }
-            }
-        );
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
+        
     }
 });
 }
