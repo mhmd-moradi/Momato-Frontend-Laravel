@@ -25,7 +25,7 @@ window.onload = function () {
             console.log(res.data);
             for(let i=0; i < res.data.restaurants.length; i++){
                 //console.log(res.data.restaurants[i].image);
-                createRestaurant(res.data.restaurants[i].restaurant_id, res.data.restaurants[i].image, res.data.restaurants[i].restaurant_name, "4.3", res.data.restaurants[i].location);
+                createRestaurant(res.data.restaurants[i].id, res.data.restaurants[i].image, res.data.restaurants[i].restaurant_name, "4.3", res.data.restaurants[i].location);
             }
 
             //restaurant onclick
