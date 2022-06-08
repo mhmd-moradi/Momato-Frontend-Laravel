@@ -49,23 +49,34 @@ window.onload = function () {
     }
 
     function insertRestaurant(){
-        let data = new FormData();
-        data.append('image', base64String);
-        data.append('name', name.value);
-        data.append('location', location.value);
-        data.append('category', category.value);
-        data.append('opening_time', opening.value + " " + opening_daytime.value);
-        data.append('closing_time', closing.value + " " + closing_daytime.value);
-        data.append('user', localStorage.getItem("id"));
-        axios({
+        let url = 'http://localhost:8000/api/add_restaurant';
+        fetch(url, {
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json, text-plain, */*",
+                },
             method: 'post',
-            url: 'http://localhost/Momato/Momato-Backend/APIs/add_restaurant.php',
-            data: data,
+            credentials: "same-origin",
+            body: JSON.stringify({
+                image: base64String,
+                name: name.value,
+                location: location.value,
+                category: category.value,
+                opening_time: opening.value + " " + opening_daytime.value,
+                closing_time: closing.value + " " + closing_daytime.value,
+                user: localStorage.getItem("id"),
+            })
         })
-        .then(function (response) {
-            let restaurant_id = response.data.restaurant_id;
+        .then(response => 
+            response.json().then(data => ({
+                data: data,
+                status: response.status
+            })
+        )).then(res => {
+            console.log(res.data);
+            let restaurant_id = res.data.restaurant_id;
             console.log(restaurant_id);
-            if(restaurant_id == -1){
+            if(restaurant_id <= 0){
                 result.innerText="Couldn't add restaurant!";
             }
             else{
@@ -76,6 +87,9 @@ window.onload = function () {
                 result.innerText=""}
                 window.location.reload();
             }
+        })
+        .catch(function(error) {
+            console.log(error);
         });
     }
 }
