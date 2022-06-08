@@ -17,13 +17,27 @@ window.onload = function () {
     const error = document.getElementsByClassName("error")[0];  
 
     function getRestaurant(){
-        axios({
+        let url = 'http://localhost:8000/api/get_restaurants/'+restaurant_id;
+        fetch(url, {
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json, text-plain, */*",
+                },
             method: 'get',
-            url: 'http://localhost/Momato/Momato-Backend/APIs/get_restaurant.php?restaurant_id='+restaurant_id,
+            credentials: "same-origin",
         })
-        .then(function (response) {
-            let res = response.data[0];
-            updateRestaurantInfo(res.image, res.restaurant_name, res.location, res.opening_time, res.closing_time);
+        .then(response => 
+            response.json().then(data => ({
+                data: data,
+                status: response.status
+            })
+        )).then(res => {
+            console.log(res.data);
+            let resp = res.data.restaurants;
+            updateRestaurantInfo(resp.image, resp.restaurant_name, resp.location, resp.opening_time, resp.closing_time);
+        })
+        .catch(function(error) {
+            console.log(error);
         });
     }
 
