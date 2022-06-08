@@ -36,7 +36,7 @@ window.onload = function () {
         }else{
             error.innerText="";
             window.localStorage.setItem("id",res.data.users.id);
-            if(res.data.is_admin){
+            if(res.data.users.role == 1){
                 window.location.href = "html/admin-page.html";
             }
             else{
