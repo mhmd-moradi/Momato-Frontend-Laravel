@@ -7,15 +7,25 @@ window.onload = function () {
     
 
     function getRestaurants(){
-        let data = new FormData();
-        axios({
+        let url = 'http://localhost:8000/api/get_restaurants';
+        fetch(url, {
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json, text-plain, */*",
+                },
             method: 'get',
-            url: 'http://localhost/Momato/Momato-Backend/APIs/get_restaurants.php',
+            credentials: "same-origin",
         })
-        .then(function (response) {
-            for(let i=0; i < response["data"].length; i++){
-                console.log(response["data"][i].image);
-                createRestaurant(response["data"][i].restaurant_id, response["data"][i].image, response["data"][i].restaurant_name, "4.3", response["data"][i].location);
+        .then(response => 
+            response.json().then(data => ({
+                data: data,
+                status: response.status
+            })
+        )).then(res => {
+            console.log(res.data);
+            for(let i=0; i < res.data.restaurants.length; i++){
+                //console.log(res.data.restaurants[i].image);
+                createRestaurant(res.data.restaurants[i].restaurant_id, res.data.restaurants[i].image, res.data.restaurants[i].restaurant_name, "4.3", res.data.restaurants[i].location);
             }
 
             //restaurant onclick
@@ -25,6 +35,9 @@ window.onload = function () {
                     window.location.href = "restaurant.html?restaurant_id="+ this.id;
                 })
             }
+        })
+        .catch(function(error) {
+            console.log(error);
         });
     }
 
