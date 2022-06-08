@@ -8,14 +8,29 @@ window.onload = function () {
     const users_container = document.getElementById("users-container");
 
     function getUsers(){
-        axios({
+        let url = 'http://localhost:8000/api/get_users';
+        fetch(url, {
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json, text-plain, */*",
+                },
             method: 'get',
-            url: 'http://localhost/Momato/Momato-Backend/APIs/get_users.php',
+            credentials: "same-origin",
         })
-        .then(function (response) {
-            for(let i=0; i < response["data"].length; i++){
-                createUser(response["data"][i].username, response["data"][i].gender, response["data"][i].email);
+        .then(response => 
+            response.json().then(data => ({
+                data: data,
+                status: response.status
+            })
+        )).then(res => {
+            console.log(res.data);
+            for(let i=0; i < res.data.users.length; i++){
+                //console.log(res.data.restaurants[i].image);
+                createUser(res.data.users[i].username, res.data.users[i].gender, res.data.users[i].email);
             }
+        })
+        .catch(function(error) {
+            console.log(error);
         });
     }
 
