@@ -11,31 +11,46 @@ window.onload = function () {
         error.innerText="Please fill all fields"
     }
     else{
-
-    let data = new FormData();
-    data.append('password', password);
-    data.append('username', username);
-    axios({
+    let url = 'http://localhost:8000/api/login';
+    let token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+    fetch(url, {
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json, text-plain, */*",
+            "X-Requested-With": "XMLHttpRequest",
+            "X-CSRF-TOKEN": token
+            },
         method: 'post',
-        url: 'http://localhost/Momato/Momato-Backend/APIs/login.php',
-        data: data,
+        credentials: "same-origin",
+        body: JSON.stringify({
+            username: username,
+            password: password
+        })
     })
-    .then(function (response) {
-        console.log(response["data"]["id"]);
-        if(response.data.user_id == -1){
+    .then(response => 
+        response.json().then(data => ({
+            data: data,
+            status: response.status
+        })
+    )).then(res => {
+        console.log(res.data.users);
+        if((res.data.users).length == 0){
             error.innerText="Wrong username or password!"
         }else{
-            error.innerText=""
-            window.localStorage.setItem("id",response.data.user_id);
-            if(response.data.is_admin){
+            error.innerText="";
+            window.localStorage.setItem("id",res.data.users.id);
+            if(res.data.is_admin){
                 window.location.href = "html/admin-page.html";
             }
             else{
                 window.location.href = "html/display-restaurants.html";
-            }
-                
+            } 
         }
-        }
-    );}
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+
+    }
 });
 }
