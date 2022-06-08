@@ -12,13 +12,10 @@ window.onload = function () {
     }
     else{
     let url = 'http://localhost:8000/api/login';
-    let token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
     fetch(url, {
         headers: {
             "Content-Type": "application/json",
             "Accept": "application/json, text-plain, */*",
-            "X-Requested-With": "XMLHttpRequest",
-            "X-CSRF-TOKEN": token
             },
         method: 'post',
         credentials: "same-origin",
